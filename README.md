@@ -54,7 +54,6 @@ Esse projeto tem como objetivo criar uma plataforma que possibilitará registro 
 <li><a href="src/README.md"> Código Fonte</a></li>
 
 # Apresentação
-  
-  PetCare
+PatCare é uma cartela digital de vacinação. Neste vídeo, apresentamos o objetivo do nosso projeto que é voltado para proprietários de pequenos animais domésticos, que através desta plataforma, poderão registrar as vacinas, as medicações e consultas veterinárias, acompanhando e criando um histórico de desenvolvimento do animalzinho com mais conforto e segurança. 
 
 [![Watch the video](https://user-images.githubusercontent.com/78277341/144880982-308d72df-079e-4f8e-a8e6-1bfbeda473de.png)](https://youtu.be/oS4SosY4xmY)
