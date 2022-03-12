@@ -1,27 +1,35 @@
-# TÍTULO DO PROJETO
+<a href="https://icei-puc-minas-pmv-ads.github.io/PetCare/"><img src="https://s1.1zoom.me/big0/885/Dogs_Cats_Guinea_pigs_White_background_Three_3_564019_1280x779.jpg" width="750px">
+# <a href="https://icei-puc-minas-pmv-ads.github.io/PetCare/"><img src="https://user-images.githubusercontent.com/77770841/134394324-8b1c1cc0-9610-4b66-bb25-e3e67839b3aa.gif" width="300px"></a>
+`ANÁLISE E DESENVOLVIMENTO DE SISTEMAS`
 
-`CURSO`
 
-`DISCIPLINA`
+`Projeto: Desenvolvimento de Aplicação Web Front-End - Turma 2 -`
 
-`SEMESTRE`
+`1º semestre`
+ #
+🐕[PatCare](https://icei-puc-minas-pmv-ads.github.io/PetCare/)
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
-
+Esse projeto tem como objetivo criar uma plataforma que possibilitará registro de vacinação de animais de estimação pelos seus respectivos proprietários, formando assim uma cartela digital com histórico de vacinação do pet desde seu nascimento ou aquisição. 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Bruno Benetolo
+* Hugo Vinicius Damasceno Pinto
+* Mariana Pimentel
+* Matheus Amorim
+* Pedro Góis
+* Sabrina Gomes
+
 
 ## Orientador
 
-* Nome completo do professor 1
+* José Wilson Da Costa
 
 ## Instruções de utilização
 
-Assim que a primeira versão do sistema estiver disponível, deverá complementar com as instruções de utilização. Descreva como instalar eventuais dependências e como executar a aplicação.
+- Acesse o projeto pelo computador ou celular:   🐕[PatCare](https://icei-puc-minas-pmv-ads.github.io/PetCare/)
+- Site publicado na Internet
+- Navegador da Internet - Chrome, Firefox ou Edge
+- Conectividade de Internet para acesso às plataformas (APISs)
 
 # Documentação
 
@@ -46,5 +54,7 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 <li><a href="src/README.md"> Código Fonte</a></li>
 
 # Apresentação
+  
+  PetCare
 
-<li><a href="presentation/README.md"> Apresentação da solução</a></li>
+[![Watch the video](https://user-images.githubusercontent.com/78277341/144880982-308d72df-079e-4f8e-a8e6-1bfbeda473de.png)](https://youtu.be/oS4SosY4xmY)
