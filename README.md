@@ -26,7 +26,7 @@ Esse projeto tem como objetivo criar uma plataforma que possibilitará registro 
 
 ## Instruções de utilização
 
-- Acesse o projeto pelo computador ou celular:   🐕[PatCare](https://icei-puc-minas-pmv-ads.github.io/PetCare/)
+- Acesse o projeto pelo computador ou celular:   🐕[PetCare](https://icei-puc-minas-pmv-ads.github.io/PetCare/)
 - Site publicado na Internet
 - Navegador da Internet - Chrome, Firefox ou Edge
 - Conectividade de Internet para acesso às plataformas (APISs)
