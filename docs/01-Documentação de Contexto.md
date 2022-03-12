@@ -37,7 +37,7 @@ Os animais de estimação carecem de cuidados para que tenham uma vida longa e s
 
 ## Público-Alvo
 
-O projeto visa como público alvo todas as pessoas que possuem algum animal de estimação em seus cuidados. O foco principal desta aplicação são jovens e adultos entre 18 - 35 anos, com facilidade de acesso em dispositivos móveis ou computadores. Podendo futuramente ser implementado novas funcionalidades que tragam ferramentas úteis às clinicas veterinárias e pet shops. 
+O projeto visa como público alvo todas as pessoas que possuem algum animal doméstico em seus cuidados. O foco principal desta aplicação são jovens, adultos e idosos, com facilidade de acesso em dispositivos móveis ou computadores. Futuramente poderá ser implementado novas funcionalidades que tragam ferramentas úteis às clinicas veterinárias e pet shops. 
 
 > **Links Úteis**: 
 > - [Saiba quais são as vacinas necessárias para cães e gatos](https://g1.globo.com/sao-paulo/sorocaba-jundiai/mundo-pet/noticia/saiba-quais-sao-as-vacinas-necessarias-para-caes-e-gatos.ghtml)
