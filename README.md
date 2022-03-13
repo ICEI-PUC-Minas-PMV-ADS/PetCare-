@@ -12,17 +12,17 @@
 Esse projeto tem como objetivo criar uma plataforma que possibilitará registro de vacinação de animais de estimação pelos seus respectivos proprietários, formando assim uma cartela digital com histórico de vacinação do pet desde seu nascimento ou aquisição. 
 ## Integrantes
 
-🐾 Bruno Benetolo
+🐾 *Bruno Benetolo*
 
-🐾 Hugo Vinicius Damasceno Pinto
+🐾 *Hugo Vinicius Damasceno Pinto*
 
-🐾 Mariana Pimentel
+🐾 *Mariana Pimentel*
 
-🐾 Matheus Amorim
+🐾 *Matheus Amorim*
 
-🐾 Pedro Góis
+🐾 *Pedro Góis*
 
-🐾 Sabrina Gomes
+🐾 *Sabrina Gomes*
 
 
 ## Orientador
