@@ -1,8 +1,6 @@
 # Especificações do Projeto
 
-
-
-A definição exata do problema e os pontos mais relevantes a serem tratados neste projeto foram consolidados com a participação dos usuários em um trabalho de imersão feita pelos membros da equipe a partir da observação dos usuários em seu local natural e por meio de entrevistas. Os detalhes levantados nesse processo foram consolidados na forma de personas e histórias de usuários.  
+PetCare visa a auxiliar os tutores a manter a organização dos registros de rotina dos seus animais de estimação. Funciona como uma cartela de vacinação digital, trazendo mais segurança e agilidade aos proprietários. 
 
 ## Personas
 
@@ -21,12 +19,12 @@ A seguir, passamos à análise detalhada das principais personas e suas respecti
 | Pedro Góis        |                                    |                |
 |--------------------|------------------------------------|----------------------------------------|
 |![](https://user-images.githubusercontent.com/78277341/158038149-d6b7dd9c-bff0-439c-9b96-233542235633.png)|**Idade:** 27  anos - **Ocupação:** Desenhista industrial  |Aplicativos: Instagram, Facebook, Linkedin, Aplicativos de bancos.|
-|**Motivações:**  Pedro possui um filhote de pastor alemão, de 5 meses de idade. Ele é sua principal companhia em casa. |**Frustrações:** Pedro é universitário e trabalha de dia e estuda à noite. Possui muitas responsabilidades e precisa otimizar os cuidados com seu animal de estimação. |**Hobbies, História:** Pedro é jovem e está construindo seu futuro estudando muito e trabalhando para ajudar os pais. Ele é proativo, gosta de ler, ver filmes e frequentar a academia. Está sempre em busca de novidades nas redes sociais e atento às mudanças tecnológicas. Adora animais e acredita que eles merecem cuidados e amor.| 
+|**Motivações:**  Pedro possui um filhote de pastor alemão, de 5 meses de idade. Ele é sua principal companhia em casa. |**Frustrações:** Pedro é universitário e trabalha de dia e estuda à noite. Possui muitas responsabilidades e precisa otimizar os cuidados com seu animal de estimação. Precisa gerir melhor o tempo para dar mais atenção ao seu pet.  |**Hobbies, História:** Pedro é jovem e está construindo seu futuro estudando muito e trabalhando para ajudar os pais. Ele é proativo, gosta de ler, ver filmes e frequentar a academia. Está sempre em busca de novidades nas redes sociais e atento às mudanças tecnológicas. Adora animais e acredita que eles merecem cuidados e amor.| 
 
 |   Leila Diniz   |                                    |                |
 |--------------------|------------------------------------|----------------------------------------|
 |![](https://user-images.githubusercontent.com/78277341/157101892-f3a69e6c-8027-4f8c-8940-b66053034dd2.png)|**Idade:** 55 anos - **Ocupação:** Ocupação: Desenvovedora de Software, mãe de 2 filhos e Dona de Casa |Aplicativos: Notion, Agenda Eletônica Google e Instagram.|
-|**Motivações:** Leila trabalha em casa como desenvolvedora de Software. Também cria 2 filhos menores e cuida do lar. Para desenvolver afeto e responsabilidade nas crianças, Maria os presenteou com um cachorro de raça Golden Retriever.  |**Frustrações:** A ida regular ao veterinário e a correta vacinação são imprescindíveis para a saúde do Golden Retriever. A raça é propensa a desenvolver diversas doenças ao longo da vida. Leila trabalha o dia todo e cria 2 crianças. Ela precisa de auxílio para acompanhar o desenvolvimento do animal doméstico, como marcação de consultas, vacinação e acompanhamento veterinário.|**Hobbies, História:** Como mãe, Maria sabe que os filhos amam animais e quer ensinar-lhes sobre ter responsabilidade. Como desenvolvedora, ela sabe que pode contar com ferramentas tecnológicas modernas para cuidar de animais domésticos, tais como: aplicativos, agendas eletrônicas e sites. Como profissional em ascensão, gosta de buscar recursos que tornem sua vida mais prática e que a auxilie no êxito de suas atividades profissionais e particulares. | 
+|**Motivações:** Leila trabalha em casa como desenvolvedora de Software. Também cria 2 filhos menores e cuida do lar. Para desenvolver afeto e responsabilidade nas crianças, Maria os presenteou com um cachorro de raça Golden Retriever.  |**Frustrações:** A ida regular ao veterinário e a correta vacinação são imprescindíveis para a saúde do Golden Retriever. A raça é propensa a desenvolver diversas doenças ao longo da vida. Leila trabalha o dia todo e cria 2 crianças. Ela precisa de auxílio para acompanhar o desenvolvimento do animal doméstico, como marcação de consultas, vacinação e acompanhamento veterinário. |**Hobbies, História:** Como mãe, Maria sabe que os filhos amam animais e quer ensinar-lhes sobre ter responsabilidade. Como desenvolvedora, ela sabe que pode contar com ferramentas tecnológicas modernas para cuidar de animais domésticos, tais como: aplicativos, agendas eletrônicas e sites. Como profissional em ascensão, gosta de buscar recursos que tornem sua vida mais prática e que a auxilie no êxito de suas atividades profissionais e particulares. | 
 
 
 
@@ -42,9 +40,9 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|**Leila Diniz** | *Controle das doses de vacina de forma dinâmica*.  | Insentivar e ajudar os filhos a ter responsabilidades com cuidado de seus pets.
+|**Leila Diniz** | *Controle das doses de vacina de forma dinâmica *.  | Insentivar e ajudar os filhos a ter responsabilidades com cuidado de seus pets.
 |**Maria de Lourdes** | *Controle de crescimento, medicação, idade e tamanho dos animais competidores. Compartilhar de forma prática de gráficos e informações sobre desenvolvimento de cada animal*. | Ter histórico geral dos animais e controle de suas necessidades com medicação, tosa e saúde. 
-| **Pedro Góis**  | *Ter o controle de forma digital das vacinas que já foram administradas e a data das próximas doses* | Auxílio nos cuidados com o crescimento do animal. |
+| **Pedro Góis**  | *Ter o controle de forma digital das vacinas que já foram administradas e a data das próximas doses* | Auxílio nos cuidados com o crescimento do animal.|
 
 
 ## Requisitos
