@@ -5,7 +5,7 @@
 
 `Projeto: Desenvolvimento de Aplicação Web Front-End - Turma 2 -`
 
-`1º semestre`
+`2º semestre`
  #
 🐶[PetCare](https://icei-puc-minas-pmv-ads.github.io/PetCare/)
 
