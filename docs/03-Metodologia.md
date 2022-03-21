@@ -44,10 +44,10 @@ A equipe está organizada da seguinte maneira:
 
 **Equipe de Desenvolvimento** :
 
-- Talles
+
 - Matheus
 - Sabrina
-- Crislaine
+
 
 **Equipe de Design**
 
@@ -60,7 +60,7 @@ A equipe está organizada da seguinte maneira:
 
 ### Processo
 
-Para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução, foi criado um quadro de backlogs [no Projects do Github](https://github.com/ICEI-PUC-Minas-PMV-ADS/PetCare/projects).
+Para acompanhar o andamento do projeto, a execução das tarefas e o status de desenvolvimento da solução, foi criado um quadro de backlogs [no Projects do Github](https://github.com/ICEI-PUC-Minas-PMV-ADS/PetCare-/projects/1).
 
 ![image](https://user-images.githubusercontent.com/78277341/134427772-e5fbfc30-bcc3-44c1-97c7-9bf2160c929e.png)
 
@@ -75,7 +75,7 @@ A equipe utilizará a plataforma Github para a construção do projeto e planeja
 > **Possíveis Ferramentas que auxiliarão no gerenciamento**:
 >
 > - [Figma](https://slack.com/)
-> - [Github PatCare Projects](https://github.com/ICEI-PUC-Minas-PMV-ADS/PetCare/projects)
+> - [Github PatCare Projects](https://github.com/ICEI-PUC-Minas-PMV-ADS/PetCare-/projects/1)
 > - [Trello](https://trello.com/b/DaCH145N/projeto-petcare)
 > - [Git Bash](https://git-scm.com/downloads)
 > - [Visual Studio Code](https://code.visualstudio.com/)
