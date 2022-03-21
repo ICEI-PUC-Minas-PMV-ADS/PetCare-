@@ -15,10 +15,10 @@ Esse projeto tem como objetivo criar uma plataforma que possibilitará registro 
 🐾 *Bruno Benetolo*
 
 🐾 *Hugo Vinicius Damasceno Pinto*
+ 
+🐾 *Matheus Amorim*
 
 🐾 *Mariana Pimentel*
-
-🐾 *Matheus Amorim*
 
 🐾 *Pedro Góis*
 
