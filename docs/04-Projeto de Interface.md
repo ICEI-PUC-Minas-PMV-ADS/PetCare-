@@ -4,7 +4,7 @@ Dentre as preocupações com o desenvolvimento da interface do sistema, foi esta
 
 ## Fluxo do Usuário 
 
-O diagrama apresentado na figura abaixo mostra o fluxo de interação do usuário pelas telas do sistema. Cada uma das telas deste fluxo é detalhada na seção de Wireframes que se segue. Para visualizar o wireframe interativo, acesse o <a href="https://www.figma.com/proto/uk6NlzfYOx8shXQK9PPYbQ/PetCare-Projeto?node-id=179%3A466&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=179%3A466"></a>ambiente interativo do projeto no Figma.</a> 
+O fluxo de interação do usuário pelas telas do sistema é apresentado no diagrama da figura abaixo. Cada uma das telas deste fluxo é detalhada na seção de Wireframes que se segue. Para visualizar o wireframe interativo, acesse o <a href="https://www.figma.com/proto/uk6NlzfYOx8shXQK9PPYbQ/PetCare-Projeto?node-id=179%3A466&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=179%3A466"></a>ambiente interativo do projeto no Figma.</a> 
 
  ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PetCare/blob/develop/docs/img/Diagrma%20de%20Fluxo.jpg)
 
@@ -80,14 +80,6 @@ Mostra as datas de aplicação/reaplicação de medicamentos e vacinas do pet se
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PetCare/blob/develop/docs/img/Tela%20Calend%C3%A1rio%20Vacinas%20Individual.png)
 
 Tela Calendário Individual - Calendário do pet selecionado.
-
-#### Gráfico de pesos 
-
-Nessa aba é apresentado à esquerda um gráfico que mostra o histórico de pesos e a direita um formulário onde é possível cadastrar, editar ou excluir uma pesagem para o pet. 
-
-![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PetCare/blob/develop/docs/img/Tela%20Cuidar%20Pet.png)
-
-Tela Gráfico de Pesos - Controle individual do peso do pet.
 
 #### Incluir vacina/ remédio 
 
