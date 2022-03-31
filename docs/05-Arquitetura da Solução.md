@@ -40,7 +40,9 @@ A publicação do site no Heroku ou no Netlify é feita por meio de uma submiss�
 O Diagrama de Classes representa abstração dos objetos bem como os seus relacionamentos. Foram imaginados quatro objetos que representarão as principais entidades do sistema. 
 
 
+
 ![image](https://user-images.githubusercontent.com/78277341/161166613-f3a680a4-57b1-46c1-bb68-ccbe66ebeee6.png)
+
 
 ## Modelo ER
 
