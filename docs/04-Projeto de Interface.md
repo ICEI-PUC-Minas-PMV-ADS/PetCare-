@@ -8,7 +8,6 @@ O fluxo de interação do usuário pelas telas do sistema é apresentado no diag
 
 ![image](https://user-images.githubusercontent.com/78277341/162073643-90ea48fc-8450-4122-9449-d65a5bba7b40.png)
 
-Fluxo de telas do usuário 
 
 ## Wireframes 
 
@@ -18,9 +17,7 @@ Conforme fluxo de telas do projeto, apresentado no item anterior, as telas do si
 <li>Menu lateral - apresenta os elementos de navegação primária, geralmente associados aos elementos do bloco de conteúdo e navegação secundária. </li>
  </ul>
 
- ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PetCare/blob/develop/docs/img/Layout.png)
-
-Estrutura padrão do site 
+ ![image](https://user-images.githubusercontent.com/78277341/162073808-31c14ca9-f714-4fd0-bc3d-6268274daad2.png)
 
 ### Tela de Login 
 
@@ -28,7 +25,6 @@ A tela de login é a primeira página acessada pelo usuário, nela é apresentad
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PetCare/blob/develop/docs/img/Tela%20de%20Login.png) 
 
-Tela Login – Formulário de acesso 
 
 ### Tela de Cadastro 
 
@@ -36,15 +32,12 @@ Caso o usuário clique no botão para se cadastrar, o mesmo é direcionado a pá
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PetCare/blob/develop/docs/img/Tela%20de%20cadastro.png)
 
-Tela Cadastro Usuário - Formulário cadastro de usuário. 
-
 ### Tela - Principal 
 
 Após ser logado no sistema, é apresentada a tela principal ao usuário, ela é dividida em dois grandes blocos, o bloco conteúdo, onde são mostradas as informações individuais a cada funcionalidade do sistema e na lateral temos o menu de navegação. A ideia da tela principal é apresentar um botão para cadastrar novos pets(limitado a 6, conforme requisito funcional RF-06) e cards com informações básicas dos pets, caso algum pet esteja com algum medicamento ou vacina próximos de vencer ou vencido é exibido uma notificação em seu card. Além disso, existe nos cards botões que levam as telas de Cuidar Pet ou Editar Pet.  
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PetCare/blob/develop/docs/img/Tela%20Principal.png)
 
-Tela Principal - Cards dos pets cadastrados.
 
 ### Tela minha conta 
 
@@ -52,7 +45,6 @@ Navegando através do menu lateral é possível o usuário acessar a página min
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PetCare/blob/develop/docs/img/Tela%20Minha%20Conta.png)
 
-Tela Minha Conta - Formulário de usuário cadastrado.
 
 ### Tela calendário de vacinação geral 
 
@@ -60,15 +52,13 @@ Acessada através do menu lateral é mostrado um calendário navegável no qual 
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PetCare/blob/develop/docs/img/Tela%20Calend%C3%A1rio%20Vacinas%20Geral.png)
 
-Tela Calendário Geral de Vacinas - Vacinas de todos os pets. 
+
 
 ### Tela editar pet 
 
 Ao clicar no botão editar pet no card da tela principal, o usuário é direcionado a tela editar pet, onde é apresentado um formulário preenchido com os dados cadastrais do pet,  sendo permitido alterar os dados, trocar foto e excluir o pet.
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PetCare/blob/develop/docs/img/Tela%20Editar%20Pet.png)
-
-Tela Editar Pet - Formulário de pet cadastrado.
 
 ### Tela cuidar pet 
 
@@ -79,7 +69,6 @@ Mostra as datas de aplicação/reaplicação de medicamentos e vacinas do pet se
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PetCare/blob/develop/docs/img/Tela%20Calend%C3%A1rio%20Vacinas%20Individual.png)
 
-Tela Calendário Individual - Calendário do pet selecionado.
 
 #### Incluir vacina/ remédio 
 
@@ -87,4 +76,3 @@ A aba incluir vacina/ remédio mostra uma tabela com todas as vacinas e remédio
 
 ![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PetCare/blob/develop/docs/img/Medicamentos.png)
 
-Tela Incluir Vacina/Remédio - Controle de medicamentos aplicados no pet.
