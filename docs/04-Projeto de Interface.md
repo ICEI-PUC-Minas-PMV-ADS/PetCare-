@@ -6,7 +6,7 @@ Dentre as preocupações com o desenvolvimento da interface do sistema, foi esta
 
 O fluxo de interação do usuário pelas telas do sistema é apresentado no diagrama da figura abaixo. Cada uma das telas deste fluxo é detalhada na seção de Wireframes que se segue. Para visualizar o wireframe interativo, acesse o <a href="https://github.com/ICEI-PUC-Minas-PMV-ADS/PetCare-/blob/develop/docs/img/DIAGRAMA%20DE%20FLUXO%20DE%20USU%C3%81RIO.png"></a>ambiente interativo do projeto no Figma.</a> 
 
-![image](img/Diagrma%20de%20Fluxo.jpg)
+![image](https://user-images.githubusercontent.com/78277341/162073643-90ea48fc-8450-4122-9449-d65a5bba7b40.png)
 
 Fluxo de telas do usuário 
 
