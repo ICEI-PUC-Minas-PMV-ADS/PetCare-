@@ -17,8 +17,6 @@ Conforme fluxo de telas do projeto, apresentado no item anterior, as telas do si
 <li>Menu lateral - apresenta os elementos de navegação primária, geralmente associados aos elementos do bloco de conteúdo e navegação secundária. </li>
  </ul>
 
- ![image](https://user-images.githubusercontent.com/78277341/162073808-31c14ca9-f714-4fd0-bc3d-6268274daad2.png)
-
 ### Tela de Login 
 
 A tela de login é a primeira página acessada pelo usuário, nela é apresentado os campos de formulários e-mail e senha, os quais devem ser preenchidos com dados previamente cadastrados. Caso o usuário não possua o cadastro no sistema, é possível através de um link especifico acessar a página de cadastro. 
