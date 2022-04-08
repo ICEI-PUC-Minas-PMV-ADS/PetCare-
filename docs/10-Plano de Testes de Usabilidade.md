@@ -1,11 +1,12 @@
 # Plano de Testes de Usabilidade
 
+Para o desenvolvimento do teste optamos por selecionar um grupo de pessoas focais com o intuito de verificar o comportamento, medindo e considerando as reações dos usuários diante das funcionalidades da aplicação através do feedback gerado pelo formulário que será disponibilizado para cada usuário, junto com as instruções para a realização do testes. 
+Após a realização, será feita uma análise de usabilidade e das principais dificuldades. 
+
 Os requisitos para realização dos testes de usabilidade são:
 - Site publicado na Internet
 - Navegador da Internet - Chrome, Firefox ou Edge
 - Conectividade de Internet para acesso às plataformas (APISs) 
-
-Para o desenvolvimento do teste optamos por selecionar um grupo de pessoas focais com o intuito de verificar o comportamento, medindo e considerando as reações dos usuários diante das funcionalidades da aplicação através do feedback gerado pelo formulário que será disponibilizado para cada usuário, junto com as instruções para a realização do tests. Após a realização, será feita uma análise de usabilidade e das principais dificuldades. O objetivo final é realizar melhorias na aplicação, proporcionando uma melhor experiência ao usuário. 
 
 Os testes de usabilidade a serem realizados no aplicativo são descritos a seguir. 
 
@@ -37,7 +38,31 @@ Os testes de usabilidade a serem realizados no aplicativo são descritos a segui
 ||8) Problemas observados (questão aberta).
 ||9) Tempo de execução para concluir a tarefa (questão aberta).
 
-|  **Critérios de Êxito**  | As aplicação deve retornar de forma satisfatória todas as funcionalidades propostas.|
+Para esta etapa do projeto, os testes serão realizados nas principais funcionalidades do sistema: login, cadastro do usuário, cadastro do pet e cadastro de vacinas. 
+
+|Tarefa 1| Critério de êxito | O que será avaliado |
+|--------|-------------------|---------------------|
+|Fazer o login no sistema | Conseguir logar no sistema e ser encaminhado para a página de cadastro |Concretização da tarefa. Quantidade de erros cometidos.
+
+|Tarefa 2| Critério de êxito | O que será avaliado |
+|--------|-------------------|---------------------|
+|Cadastro de novo usuário|Concluir o cadastro, considerando a mensagem "Cadastro realizado com sucesso"|Concretização da tarefa. Quantidade de erros cometidos. Tempo necessario para se concluir|
+
+|Tarefa 3| Critério de êxito | O que será avaliado |
+|--------|-------------------|---------------------|
+|Cadastro de novo pet|Concluir o cadastro, considerando a mensagem "Cadastro realizado com sucesso"|Concretização da tarefa. Quantidade de erros cometidos. Tempo necessário para se concluir|
+
+|Tarefa 4| Critério de êxito | O que será avaliado |
+|--------|-------------------|---------------------|
+|Cadastro de vacina do pet|Inserir nome da vacina no item calendário, salvando o nome no campo.|Concretização da tarefa. Quantidade de erros cometidos. Tempo necessário para se concluir|
+
+### Objetivo
+
+Fazer melhorias na plataforma proporcionando uma melhor experiência ao usuário. O que será mensurado no teste:
+
+- A qualidade na navegação
+- Satisfação do usuário
+
 #
 ## Ferramentas de Testes
 Para realizar os testes e verificar a responsividade das páginas, foram utilizados:
