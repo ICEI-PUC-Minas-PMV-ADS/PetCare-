@@ -33,12 +33,18 @@ Esse projeto tem como objetivo criar uma plataforma que possibilitará registro 
 
 - Acesse o projeto pelo computador ou celular:   🐕[PetCare](https://icei-puc-minas-pmv-ads.github.io/PetCare/)
  
+<<<<<<< HEAD
 
          - E-mail: brunobenetolo@hotmail.com  
          - Senha:  123456
 
  
 
+=======
+                - E-mail: brunobenetolo@hotmail.com  
+                - Senha:  123456
+
+>>>>>>> develop
 - Site publicado na Internet
 - Navegador da Internet - Chrome, Firefox ou Edge
 - Conectividade de Internet para acesso às plataformas (APISs)
