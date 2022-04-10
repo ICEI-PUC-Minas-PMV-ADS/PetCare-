@@ -59,22 +59,7 @@ Neste ponto, a equipe verificou que algumas melhorias podem ser aplicadas:
 
 Na mesma página, tem-se ainda duas abas com as seguintes ferramentas: "*Gráfico de pesos*" e "*Incluir Vacina / medicamento*".
 
-### 3.1 Testando *Gráfico de pesos* e *Incluir Vacina / medicamento*.
 
-Em "*Gradico de pesos*" verificamos que a imagem representativa de um gráfico é aberta e ao seu lado, um campo para inserir as informações de peso é mostrado. Este campo possui dois botões, sendo um de remover e outro de adicionar. Logo, verificamos uma tabela com o resumo dos dados inseridos.
-
-![image](https://user-images.githubusercontent.com/78277341/143724710-5fd5677b-bb4b-45bb-9e0e-9ed63375dbc3.png)
-#
-
-Constatou-se também que a página encontra-se devidamente responsiva. Vejamos: 
-
-![image](https://user-images.githubusercontent.com/78277341/143724764-85514702-21b3-427c-867b-c7f1e637a7e3.png)
-#
-### :point_right: Observações importantes em Gráfico de Pesos:
-Neste ponto, a equipe verificou que algumas melhorias podem ser aplicadas:
-- Os botões ainda não executam as funcionalidades e o gráfico ainda não pode representar as informações inseridas. 
-- Adequar fontes de textos mais harmônicas e padronizar seus tamanhos. 
-#
 ## 4. Testando ferramenta "Minha Conta"
 Nesta página, verificou-se que é mostrado, além de um formulário, os botões de "salvar" e "excluir conta". Também foram aplicadas diferentes dimensões para o teste de responsividade, conforme demonstrado a seguir: 
 
