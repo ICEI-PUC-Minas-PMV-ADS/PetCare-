@@ -41,7 +41,8 @@ O Diagrama de Classes representa abstração dos objetos bem como os seus relaci
 
 
 
-![image](https://user-images.githubusercontent.com/78277341/161166613-f3a680a4-57b1-46c1-bb68-ccbe66ebeee6.png)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/PetCare-/blob/main/docs/img/Diagrama%20de%20classes%20PetCare.PNG?raw=true)
+
 
 
 ## Modelo ER
