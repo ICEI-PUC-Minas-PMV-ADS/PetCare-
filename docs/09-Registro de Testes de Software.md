@@ -3,8 +3,8 @@
 O presente relatório demonstra as evidências dos testes de software realizados no sistema pela equipe e é baseado no plano de testes definido no [item 8 deste projeto](https://github.com/ICEI-PUC-Minas-PMV-ADS/PetCare-/blob/main/docs/08-Plano%20de%20Testes%20de%20Software.md).
 
 ## 1. Login:
-
-Verificamos que a tela de login mostra um campo para que o usuário informe seus dados.
+Seguindo o plano de testes, iniciamos as verificações pela tela de login. 
+Verificamos que a tela mostra um campo para que o usuário informe seus dados.
 Para acessar o sistema, é necessário realizar o cadastrado.
 
 ![image](https://user-images.githubusercontent.com/78277341/168466558-67571ffb-be65-4c3c-981e-ba53ad9b1a58.png)
@@ -121,7 +121,7 @@ Neste ponto, a equipe verificou que algumas melhorias deverão ser aplicadas:
 Neste campo, o usuário poderá registrar o peso do pet, para acompanhamento.
 A tela mostra um campo para que seja registrado o tipo de pesagem, informações do peso (onde podemos escolher por ***acima do peso, abaixo do peso, peso normal***), podemos informar o ***valor do peso*** e a ***data de pesagem***.
 
-Ao clicarmos em Adcionar, o sistema registra os dados e mostra uma tabela com as informações inseridas.
+Ao clicarmos em Adicionar, o sistema registra os dados e mostra uma tabela com as informações inseridas.
 Também é exibido as ferramentas de edição e exclusão desse cadastro.
 
 ![image](https://user-images.githubusercontent.com/78277341/168467428-614e4894-97ef-45ca-bc19-cdcec9736ea7.png)
@@ -136,7 +136,7 @@ Neste ponto, a equipe verificou que algumas melhorias deverão ser aplicadas:
 
 Na aba incluir vacinas, é possível ***cadastrar o medicamento***, informando sua ***descrição, data, nome e dosagem***.
 
-Também foi verificado que o sistema realiza a ***busca por nome de medicamento*** e a mostra uma tabela com os dados registrados. Vejamos:
+Também foi verificado que o sistema realiza a ***busca por nome de medicamento*** e também exibe uma tabela com os dados registrados. Vejamos:
 
 ![image](https://user-images.githubusercontent.com/78277341/168467457-c72b1c30-2410-44ab-a096-eca5d71445af.png)
 
