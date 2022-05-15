@@ -31,8 +31,8 @@ Neste ponto, a equipe verificou que:
 - Verificou-se que o sistema salvou os dados do usuário no banco de dados com sucesso.
 - Após cadastro, o usuário é redirecionado a tela "Login" e é possível acessar o sistema.
 
-#
-### 3. Testando a tela *Principal*
+
+## 3. Testando a tela *Principal*
 Seguindo o plano de testes, realizado o cadastro corretamente e efetuado o login, verficamos que o usuário é encaminhado à página principal da aplicação. Nesta tela, o usuário encontrará o menu na barra lateral com as seguintes ferramentas:
 - Meus Pets,
 - Minha Conta
@@ -42,7 +42,6 @@ Seguindo o plano de testes, realizado o cadastro corretamente e efetuado o login
 Na parte principal da tela, é possivel visualizar a ferramenta “**+**” para inserir os dados do pet. Vejamos:
 
 ![image](https://user-images.githubusercontent.com/78277341/168466998-5506260b-85e1-4d41-bed2-0d4852ac45ea.png)
-#
 
 ## 4. Testando a tela *Minha Conta*:
 Nesta ferramenta, verificamos que o usuário poderá alterar seus dados ou excluir sua conta. Para isso, terá que confirmar sua senha..
@@ -60,7 +59,7 @@ Neste ponto, a equipe verificou que:
 :point_right: Também foi verificado que algumas melhorias devem ser aplicadas:
 
 - Ainda não é possível guardar as imagens ou fotos inseridas pelo usuário no campo do perfil.
-#
+
 ## 5. Testando a tela *Meus Pets*:
 
 Constatou-se que ao clicar em Meus Pets, o usuário é redirecionado para a tela de cadastro do animal.
@@ -142,9 +141,9 @@ Também foi verificado que o sistema realiza a ***busca por nome de medicamento*
 ![image](https://user-images.githubusercontent.com/78277341/168467457-c72b1c30-2410-44ab-a096-eca5d71445af.png)
 
 
-## 11. Vídeo de demonstração:
+## 11. Vídeo de demonstração🍿:
 
-Clic na imagem abaixo e pega uma pipoca para assistir nosso emocionante vídeo de registro de testes de software. :)
+Clica na imagem abaixo e pega uma pipoca para assistir nosso emocionante vídeo de registro de testes de software. :)
 
 [![Watch the video](https://user-images.githubusercontent.com/78277341/144880982-308d72df-079e-4f8e-a8e6-1bfbeda473de.png)](https://youtu.be/LR2cz3U-OL4)
 
