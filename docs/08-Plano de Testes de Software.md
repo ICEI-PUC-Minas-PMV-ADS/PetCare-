@@ -100,7 +100,17 @@ Os testes funcionais a serem realizados no aplicativo são descritos a seguir.
 |  **Objetivo do Teste**  | Verificar se as abas estão sendo exibidas                                                                       |
 |   | **Passos**                                                                                                      
 ||1) Clicar nas três abas.
-|  **Critérios de Êxito**  | As três abas estão sendo exibidas.                                                                              
+|  **Critérios de Êxito**  | As três abas estão sendo exibidas.   
+
+| **Caso de Teste**  | Gráfico de Pesos                                                                                                 |
+| ------------------- |-----------------------------------------------------------------------------------------------------------------|
+| **Requisitos Associados** | Esta tela apresenta o gráfico baseado no histórico de pesagens e 4 campos para registro de nova pesagem: Descrição, Observação peso e data da pesagem. |
+|  **Objetivo do Teste**  | Verificar se o gráfico está exibindo os dados corretamente de acordo com a tabela de histórico de pesagens, verificar se os inputs estão capturando os dados e os registrando corretamente.                                                                       |
+|   | **Passos**                                                                                                      
+||1) Inserir os dados nos campos para cadastrar nova pesagem e clicar em adicionar.
+|  **Critérios de Êxito**  | Dados adicionados com êxito.
+||2) Clicar no botão remover para remover dados de pesagem.
+|  **Critérios de Êxito**  | Dados dados removidos com êxito. 
 
 #
 ## Ferramentas de Testes
