@@ -9,7 +9,7 @@
  #
 🐶[PetCare](https://icei-puc-minas-pmv-ads.github.io/PetCare/)
 
-Esse projeto tem como objetivo criar uma plataforma que possibilitará registro de vacinação de animais de estimação pelos seus respectivos proprietários, formando assim uma cartela digital com histórico de vacinação do pet desde seu nascimento ou aquisição. 
+O presente projeto tem como objetivo criar uma plataforma que possibilitará registro de vacinação o de animais de estimação pelos seus respectivos proprietários, formando assim uma cartela digital com histórico de vacinação do pet desde seu nascimento ou aquisição. 
 ## Integrantes
 
 🐾 *Bruno Benetolo*
