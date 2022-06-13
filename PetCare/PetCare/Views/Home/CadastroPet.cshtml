@@ -1,0 +1,109 @@
+﻿@model Pet;
+@using Microsoft.AspNetCore.Http;
+@using PetCare.Models
+
+@{
+    ViewData["Title"] = "Cadastrar pet";
+}
+
+=
+
+<div class="painel-secundario">
+    <div class="bt-fechar">
+        <a href="/Home/Main"><i class="fas fa-times"></i></a>
+    </div>
+    <div class="formulario-interno">
+        <div class="wrp-form">
+            <div class="wrp-left">
+                <div class="wrp-img">
+                     <figure class="figure">
+                        <canvas class="invisivel" id="canvas" width=256 height=256>
+                        </canvas>
+
+                    </figure>
+                    @{/*
+                     * if(@Model.imagem != null)
+                        {
+
+                            ViewData["caminhoImagem"] = @Model.imagem;
+                            <img id="imgPet" src="@ViewData["caminhoImagem"]" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                        }
+                        else{
+                            <img id="imgPet" src="tesrw" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+
+                            
+                        }
+                     * 
+                     */
+                        
+                    }
+                </div>
+            </div>
+            <form action="CadastroPet" method="post">
+                <input type="text" name="nome" asp-for="nome" placeholder="Nome" required />
+                <input type="text" name="especie" asp-for="especie" placeholder="Espécie" required />
+                <input type="text" name="raca" asp-for="raca" placeholder="Raça" required />
+                <input type="date" name="nascimento" asp-for="nascimento" required />
+                <input type="hidden" name="id" asp-for="id" />
+                <input type="hidden" name="idDono" asp-for="idDono" value=@Context.Session.GetInt32("id") required />
+                <input type="file" id="input" accept=".jpeg, .png, .jpg"  class="custom-file-input"/>
+                <textarea class="invisivel" id="imagem" asp-for="imagem" name="imagem" required></textarea>
+                
+                
+                @{
+                    if (Model != null && Model.id != null)
+                    {
+
+                        <button asp-action="AlterarPet" id="bt-login">Salvar</button>
+                        <button asp-action="ExcluirPet" id="bt-login">Excluir Pet</button>
+                    }
+                    else
+                    {
+
+                        <button asp-action="CadastroPet" id="bt-login">Cadastrar</button>
+                        <div class="msg-info">@ViewBag.MsgErroCadastro</div>
+                    }
+                }
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+        var canvas=document.getElementById("canvas");
+        var ctx=canvas.getContext("2d");
+        var cw=canvas.width;
+        var ch=canvas.height;
+        var maxW=256;
+        var maxH=256;
+
+        var input = document.getElementById('input');
+        var output = document.getElementById('imagem');
+        var imgPet = document.getElementById('imgPet');
+
+        input.addEventListener('change', handleFiles);
+
+        function handleFiles(e) {
+          var img = new Image;
+          img.onload = function() {
+            var iw=img.width;
+            var ih=img.height;
+            var scale=Math.min((maxW/iw),(maxH/ih));
+            var iwScaled=iw*scale;
+            var ihScaled=ih*scale;
+            canvas.width=iwScaled;
+            canvas.height=ihScaled;
+            ctx.drawImage(img,0,0,iwScaled,ihScaled);
+            output.value  = canvas.toDataURL("image/jpeg",1);
+            imgPet.src=output.value;
+            
+          }
+          img.src = URL.createObjectURL(e.target.files[0]);
+        }
+
+</script>
+</script>

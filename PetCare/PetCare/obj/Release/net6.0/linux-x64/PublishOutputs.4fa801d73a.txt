@@ -1,0 +1,8 @@
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Release\net6.0\linux-x64\PubTmp\Out\PetCare
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Release\net6.0\linux-x64\PubTmp\Out\appsettings.Development.json
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Release\net6.0\linux-x64\PubTmp\Out\appsettings.json
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Release\net6.0\linux-x64\PubTmp\Out\PetCare.dll
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Release\net6.0\linux-x64\PubTmp\Out\PetCare.deps.json
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Release\net6.0\linux-x64\PubTmp\Out\PetCare.runtimeconfig.json
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Release\net6.0\linux-x64\PubTmp\Out\PetCare.pdb
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Release\net6.0\linux-x64\PubTmp\Out\MySqlConnector.dll

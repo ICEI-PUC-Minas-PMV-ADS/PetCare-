@@ -1,0 +1,90 @@
+﻿@using Microsoft.AspNetCore.Http;
+@model Usuario;
+
+@{
+    ViewData["Title"] = "Alterar meus dados";
+}
+
+
+<div class="painel-secundario">
+    <div class="bt-fechar">
+        <a href="/Home/Main"><i class="fas fa-times"></i></a>
+    </div>
+    <div class="formulario-interno">
+        <div class="wrp-form">
+            <div class="wrp-left">
+                <div class="wrp-img">
+                    
+                        <canvas class="invisivel" id="canvas" width=256 height=256>
+                        </canvas>
+
+                    
+                            @{
+                                ViewData["caminhoImagem"] = @Model.imagem;
+                                <img id="imgUser" src="@ViewData["caminhoImagem"] " class="figure-img img-fluid rounded" alt="">
+                            }
+                </div>
+            </div>
+            <form action="AlterarUsuario" method="post" enctype="multipart/form-data">
+                <input type="file" id="input" accept=".jpeg, .png, .jpg"  class="custom-file-input">
+                <textarea class="invisivel" id="imagem" asp-for="imagem" name="imagem" required></textarea>
+                <input type="text" id="nome" asp-for="nome" name="nome" placeholder="Nome" required>
+                <input type="email" id="email" asp-for="email" name="email" placeholder="E-mail" required>
+                <input type="date" id="nascimento" asp-for="nascimento" name="nascimento" placeholder="Data de nascimento" required>
+                <input type="password" id="senha" asp-for="senha" name="senha" placeholder="Senha" required>
+                <input type="password" id="confirma_senha" asp-for="confirma_senha" name="confirma_senha" placeholder="Confirmar Senha" required>
+                <input type="hidden" id="id" asp-for="id" name="id" required>
+
+
+                @{
+                    <button asp-action="AlterarUsuario" id="bt-login">Alterar</button>
+                    <button asp-action="ExcluirUsuario"> Excluir</button>
+                }
+
+            </form>
+
+
+            <div class="msg-info">@ViewBag.MsgTelaAlterarUsuario</div>
+
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        const imgUser = document.getElementById('imgUser');
+        var canvas=document.getElementById("canvas");
+        var ctx=canvas.getContext("2d");
+        var cw=canvas.width;
+        var ch=canvas.height;
+        var maxW=256;
+        var maxH=256;
+
+        
+        var input = document.getElementById('input');
+        var output = document.getElementById('imagem');
+        input.addEventListener('change', handleFiles);
+
+        function handleFiles(e) {
+          var img = new Image;
+          img.onload = function() {
+            var iw=img.width;
+            var ih=img.height;
+            var scale=Math.min((maxW/iw),(maxH/ih));
+            var iwScaled=iw*scale;
+            var ihScaled=ih*scale;
+            canvas.width=iwScaled;
+            canvas.height=ihScaled;
+            ctx.drawImage(img,0,0,iwScaled,ihScaled);
+            output.value  = canvas.toDataURL("image/jpeg",1);
+            
+           imgUser.src=output.value;
+          }
+          
+            console.log(imgUser.src)
+          img.src = URL.createObjectURL(e.target.files[0]);
+        }
+
+</script>
+}
+

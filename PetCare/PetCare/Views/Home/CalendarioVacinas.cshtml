@@ -1,0 +1,34 @@
+﻿@model IndexModelView;
+@using Microsoft.AspNetCore.Http;
+@using PetCare.Models
+
+@{
+    ViewData["Title"] = "Calendário geral";
+}
+
+
+<div class="painel-secundario">
+    <nav class="nav-tabs">
+        <ul>
+            <li>
+                <input type="radio" name="tabs" class="tabs" id="tab1" checked>
+                <label for="tab1">Calendário de Vacinas</label>
+                <div class="content">
+                    <article>
+                        <div id='calendar-individual'></div>
+                    </article>
+                </div>
+            </li>
+
+            <a href="/Home/Main"><i class="fas fa-times"></i></a>
+    </nav>
+</div>
+
+
+
+@section Scripts{
+<script src="~/js/grafico.js" asp-append-version="true"></script>
+<script src="~/js/calendario.js" asp-append-version="true"></script>
+
+
+}
