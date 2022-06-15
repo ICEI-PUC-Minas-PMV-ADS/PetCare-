@@ -13,8 +13,8 @@ namespace PetCare.Models
          */
 
         //private const string enderecoConexao = "Database=petcare; Datasource=petcarebrasil.mysql.database.azure.com; Username=Bruno@petcarebrasil; Password=Administrador123;";
-       // private const string enderecoConexao = "Database=heroku_cd40deb8c8e7a90; Datasource=us-cdbr-east-05.cleardb.net; Username=bda983acb9bb6e; Password=4148f624; SSL Mode=None";
-        private const string enderecoConexao = "Database=heroku_cd40deb8c8e7a90; Datasource=localhost; Username=root; Password=admin;";
+       private const string enderecoConexao = "Database=heroku_cd40deb8c8e7a90; Datasource=us-cdbr-east-05.cleardb.net; Username=bda983acb9bb6e; Password=4148f624; SSL Mode=None";
+        //private const string enderecoConexao = "Database=heroku_cd40deb8c8e7a90; Datasource=localhost; Username=root; Password=admin;";
 
         //Sistema de Login
         public Usuario Login(Usuario user)
@@ -430,6 +430,111 @@ namespace PetCare.Models
 
             return lista;
         }
+
+        public List<IndexModelView> listarRegistrosTodosMedicamentos()
+        {
+            MySqlConnection conexao = new MySqlConnection(enderecoConexao);
+            conexao.Open();
+
+            string stringSqlMed = "SELECT r.id, r.idpet, r.tiporegistro, r.descricao, m.nome, m.aplicacao, m.reaplicacao, m.dosagem FROM heroku_cd40deb8c8e7a90.registros AS r INNER JOIN heroku_cd40deb8c8e7a90.medicamentos AS m ON m.idregistro = r.id ORDER BY r.id ASC";
+            MySqlCommand cmdMed = new MySqlCommand(stringSqlMed, conexao);
+        
+            MySqlDataReader dadosMed = cmdMed.ExecuteReader();
+
+            List<IndexModelView> lista = new List<IndexModelView>();
+            while (dadosMed.Read())
+            {
+                IndexModelView modelo = new IndexModelView();
+                Registro registro = new Registro();
+                registro.id = dadosMed.GetInt32("id");
+                modelo.idPet = dadosMed.GetInt32("idPet");
+                if (!dadosMed.IsDBNull(dadosMed.GetOrdinal("tiporegistro")))
+                {
+                    registro.tipoRegistro = dadosMed.GetString("tiporegistro");
+                }
+                if (!dadosMed.IsDBNull(dadosMed.GetOrdinal("descricao")))
+                {
+                    registro.descricao = dadosMed.GetString("descricao");
+                }
+                modelo.Registro = registro;
+                Medicamento medicamento = new Medicamento();
+                if (!dadosMed.IsDBNull(dadosMed.GetOrdinal("nome")))
+                {
+                    medicamento.nome = dadosMed.GetString("nome");
+                }
+                if (!dadosMed.IsDBNull(dadosMed.GetOrdinal("aplicacao")))
+                {
+                    medicamento.aplicacao = dadosMed.GetString("aplicacao");
+                }
+                if (!dadosMed.IsDBNull(dadosMed.GetOrdinal("reaplicacao")))
+                {
+                    medicamento.reaplicacao = dadosMed.GetString("reaplicacao");
+                }
+                if (!dadosMed.IsDBNull(dadosMed.GetOrdinal("dosagem")))
+                {
+                    medicamento.dosagem = dadosMed.GetString("dosagem");
+                }
+                modelo.Medicamento = medicamento;
+
+                lista.Add(modelo);
+            }
+
+
+            conexao.Close();
+
+            return lista;
+        }
+
+        public List<IndexModelView> listarRegistrosTodasVacinas()
+        {
+            MySqlConnection conexao = new MySqlConnection(enderecoConexao);
+            conexao.Open();
+            string stringSqlVac = "SELECT r.id, r.idpet, r.tiporegistro, r.descricao, v.nome, v.aplicacao, v.reaplicacao FROM heroku_cd40deb8c8e7a90.registros AS r INNER JOIN heroku_cd40deb8c8e7a90.vacinas AS v ON v.idregistro = r.id ORDER BY r.id ASC";
+            MySqlCommand cmdVac = new MySqlCommand(stringSqlVac, conexao);
+            
+            MySqlDataReader dadosVac = cmdVac.ExecuteReader();
+
+            List<IndexModelView> lista = new List<IndexModelView>();
+
+            while (dadosVac.Read())
+            {
+                IndexModelView modelo = new IndexModelView();
+                Registro registro = new Registro();
+                registro.id = dadosVac.GetInt32("id");
+                modelo.idPet = dadosVac.GetInt32("idPet");
+                if (!dadosVac.IsDBNull(dadosVac.GetOrdinal("tiporegistro")))
+                {
+                    registro.tipoRegistro = dadosVac.GetString("tiporegistro");
+                }
+                if (!dadosVac.IsDBNull(dadosVac.GetOrdinal("descricao")))
+                {
+                    registro.descricao = dadosVac.GetString("descricao");
+                }
+                modelo.Registro = registro;
+                Vacina vacina = new Vacina();
+                if (!dadosVac.IsDBNull(dadosVac.GetOrdinal("nome")))
+                {
+                    vacina.nome = dadosVac.GetString("nome");
+                }
+                if (!dadosVac.IsDBNull(dadosVac.GetOrdinal("aplicacao")))
+                {
+                    vacina.aplicacao = dadosVac.GetString("aplicacao");
+                }
+                if (!dadosVac.IsDBNull(dadosVac.GetOrdinal("reaplicacao")))
+                {
+                    vacina.reaplicacao = dadosVac.GetString("reaplicacao");
+                }
+
+                modelo.Vacina = vacina;
+
+                lista.Add(modelo);
+            }
+
+
+            conexao.Close();
+
+            return lista;
+        }
         public IndexModelView retornaRegistro(int idPet, int idReg, string tipoReg)
         {
             MySqlConnection conexao = new MySqlConnection(enderecoConexao);
@@ -532,13 +637,21 @@ namespace PetCare.Models
 
             return modelo;
         }
-
         public List<IndexModelView> retornaCalendarioIndividual(int idPet) {
             List<IndexModelView> listaFinal = listarRegistrosMedicamentos(idPet);
             List <IndexModelView> listaVacinas = listarRegistrosVacinas(idPet);
             listaFinal.AddRange(listaVacinas);
             return listaFinal;
         }
+        public List<IndexModelView> retornaCalendarioGeral()
+        {
+            List<IndexModelView> listaFinal = listarRegistrosTodosMedicamentos();
+            List<IndexModelView> listaVacinas = listarRegistrosTodasVacinas();
+            listaFinal.AddRange(listaVacinas);
+            return listaFinal;
+        }
+
+
 
         //CRUD Pesos
         public void inserirPeso(IndexModelView peso)

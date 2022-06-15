@@ -87,6 +87,7 @@ namespace PetCare.Controllers
                     if (user.senha == userLogado.senha)
                     {
                         repo.ExcluirUsuario(id);
+                        Logout();
                         return View("~/Views/Home/Index.cshtml");
                     }
                     else
@@ -139,7 +140,17 @@ namespace PetCare.Controllers
                 else
                 {
                     Repositorio repo = new Repositorio();
+                    if(pet.imagem != null)
+                    {
+
                     repo.inserirPet(pet);
+                    }
+                    else
+                    {
+                        pet.imagem = "../assets/profileDefault.png";
+                        repo.inserirPet(pet);
+
+                    }
                     return RedirectToAction("Main");
                 }
             }
@@ -490,6 +501,20 @@ namespace PetCare.Controllers
                 return View("~/Views/Home/Index.cshtml");
             }
         }
+
+        public IActionResult GetJsonCalendarioGeral(int idUsuario)
+        {
+            if (HttpContext.Session.GetInt32("id") != null)
+            {
+                Repositorio repo = new Repositorio();
+                return Json(repo.retornaCalendarioGeral());
+            }
+            else
+            {
+                return View("~/Views/Home/Index.cshtml");
+            }
+        }
+
 
         [HttpPost]
         public IActionResult Buscar(string textBuscado)

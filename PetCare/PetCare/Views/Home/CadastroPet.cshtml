@@ -3,6 +3,7 @@
 @using PetCare.Models
 
 @{
+
     ViewData["Title"] = "Cadastrar pet";
 }
 
@@ -16,26 +17,20 @@
         <div class="wrp-form">
             <div class="wrp-left">
                 <div class="wrp-img">
-                     <figure class="figure">
+                    <figure class="figure">
                         <canvas class="invisivel" id="canvas" width=256 height=256>
                         </canvas>
 
                     </figure>
-                    @{/*
-                     * if(@Model.imagem != null)
-                        {
+                    @if (@Model != null)
+                    {
+                        ViewData["caminhoImagem"] = @Model.imagem;
+                        <img id="imgPet" src="@ViewData["caminhoImagem"]" class="figure-img img-fluid rounded" alt="">
+                    }
+                    else
+                    {
+                        <img id="imgPet" src="../assets/profileDefault.png" class="figure-img img-fluid rounded" alt="">
 
-                            ViewData["caminhoImagem"] = @Model.imagem;
-                            <img id="imgPet" src="@ViewData["caminhoImagem"]" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-                        }
-                        else{
-                            <img id="imgPet" src="tesrw" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
-
-                            
-                        }
-                     * 
-                     */
-                        
                     }
                 </div>
             </div>
@@ -46,10 +41,9 @@
                 <input type="date" name="nascimento" asp-for="nascimento" required />
                 <input type="hidden" name="id" asp-for="id" />
                 <input type="hidden" name="idDono" asp-for="idDono" value=@Context.Session.GetInt32("id") required />
-                <input type="file" id="input" accept=".jpeg, .png, .jpg"  class="custom-file-input"/>
-                <textarea class="invisivel" id="imagem" asp-for="imagem" name="imagem" required></textarea>
-                
-                
+                <input type="file" id="input" accept=".jpeg, .png, .jpg" class="custom-file-input" />
+                <textarea class="invisivel" id="imagem" asp-for="imagem" name="imagem" value="../assets/profileDefault.png"></textarea>
+
                 @{
                     if (Model != null && Model.id != null)
                     {
@@ -74,36 +68,35 @@
 
 <script>
 
-        var canvas=document.getElementById("canvas");
-        var ctx=canvas.getContext("2d");
-        var cw=canvas.width;
-        var ch=canvas.height;
-        var maxW=256;
-        var maxH=256;
+    var canvas=document.getElementById("canvas");
+    var ctx=canvas.getContext("2d");
+    var cw=canvas.width;
+    var ch=canvas.height;
+    var maxW=256;
+    var maxH=256;
 
-        var input = document.getElementById('input');
-        var output = document.getElementById('imagem');
-        var imgPet = document.getElementById('imgPet');
+    var input = document.getElementById('input');
+    var output = document.getElementById('imagem');
+    var imgPet = document.getElementById('imgPet');
 
-        input.addEventListener('change', handleFiles);
+    input.addEventListener('change', handleFiles);
 
-        function handleFiles(e) {
-          var img = new Image;
-          img.onload = function() {
-            var iw=img.width;
-            var ih=img.height;
-            var scale=Math.min((maxW/iw),(maxH/ih));
-            var iwScaled=iw*scale;
-            var ihScaled=ih*scale;
-            canvas.width=iwScaled;
-            canvas.height=ihScaled;
-            ctx.drawImage(img,0,0,iwScaled,ihScaled);
-            output.value  = canvas.toDataURL("image/jpeg",1);
-            imgPet.src=output.value;
-            
-          }
-          img.src = URL.createObjectURL(e.target.files[0]);
-        }
+    function handleFiles(e) {
+      var img = new Image;
+      img.onload = function() {
+        var iw=img.width;
+        var ih=img.height;
+        var scale=Math.min((maxW/iw),(maxH/ih));
+        var iwScaled=iw*scale;
+        var ihScaled=ih*scale;
+        canvas.width=iwScaled;
+        canvas.height=ihScaled;
+        ctx.drawImage(img,0,0,iwScaled,ihScaled);
+        output.value  = canvas.toDataURL("image/jpeg",1);
+        imgPet.src=output.value;
 
-</script>
+      }
+      img.src = URL.createObjectURL(e.target.files[0]);
+    }
+
 </script>
