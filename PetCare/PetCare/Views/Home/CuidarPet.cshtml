@@ -469,7 +469,7 @@
     async function getDadosCalendario(){
         var dados=[];
         await $.get(url, parametros, function(response){
-            //console.log(response);
+            
             var arrayEventos = Array.from(response);
             arrayEventos.forEach((elemento)=>{
                 if(elemento.registro.tipoRegistro=="Medicamento"){
@@ -477,7 +477,8 @@
                         title: elemento.medicamento.nome,
                         description: elemento.registro.descricao,
                         start: elemento.medicamento.aplicacao,
-                        end: elemento.medicamento.aplicacao
+                        end: elemento.medicamento.aplicacao,
+                        display: 'background'
                     };
                 }
                 if(elemento.registro.tipoRegistro=="Vacina"){
@@ -485,7 +486,9 @@
                         title: elemento.vacina.nome,
                         description: elemento.registro.descricao,
                         start: elemento.vacina.aplicacao,
-                        end: elemento.vacina.aplicacao
+                        end: elemento.vacina.aplicacao,
+                        display: 'background'
+
                     };
                 }
                 
@@ -496,7 +499,6 @@
 
         });
         
-        //dados = JSON.stringify(dados);
         return dados;
         
     }
