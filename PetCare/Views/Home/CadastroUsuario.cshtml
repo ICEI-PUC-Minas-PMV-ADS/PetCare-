@@ -1,0 +1,49 @@
+﻿@model Usuario;
+@using Microsoft.AspNetCore.Http;
+
+@{
+    ViewData["Title"] = "Cadastro";
+}
+
+<section class="conteudo">
+    <div class="formulario">
+        <div class="acoes">
+            <div class="bt-retorno">
+                <a href="/">
+                    <i class="fas fa-arrow-left"></i>
+                    <h5>Voltar</h5>
+                </a>
+            </div>
+        </div>
+        <form action="CadastroUsuario" method="POST">
+            <div class="titulo">
+                <h3>Cadastre-se no PetCare</h3>
+                <h4>Começe a cuidar agora de seus pets.</h4>
+            </div>
+            <div class="campos">
+                <div class="campo">
+                    <input type="text" asp-for="nome" name="nome" required placeholder="Nome">
+                </div>
+                <div class="campo">
+                    <input type="email" asp-for="email" name="email" required placeholder="E-mail">
+                </div>
+                <div class="campo">
+                    <input type="date" asp-for="nascimento" name="nascimento" placeholder="Nascimento" required>
+                </div>
+                <div class="campo">
+                    <input type="password" asp-for="senha" name="senha" placeholder="Senha" required>
+                </div>
+                <div class="campo">
+                    <input type="password" asp-for="confirma_senha" name="confirma_senha" placeholder="Confirmar senha" required>
+                </div>
+            </div>
+            <button id="bt-login">Cadastrar</button>
+            <div class="msg-info">@ViewBag.MsgErroCadastro</div>
+            </form>
+    </div>
+    <div class="banner">
+        <div class="wrapper-banner">
+            <img src="~/assets/banner.jpg" alt="">
+        </div>
+    </div>
+</section>

@@ -1,0 +1,599 @@
+﻿@model IndexModelView;
+@using Microsoft.AspNetCore.Http;
+@using PetCare.Models
+
+@{
+    ViewData["Title"] = "Cadastro";
+    ViewData["TipoRegistro"] = "Medicamento";
+    ViewData["urlForm"] = "";
+    ViewData["listaBuscada"] = "";
+    ViewData["listaPesos"] = @Model.ListaRegistrosPesos;
+
+}
+
+
+<div class="painel-secundario">
+    <nav class="nav-tabs">
+        <ul>
+            <li>
+                <input type="radio" name="tabs" class="tabs" id="tab1" checked>
+                <label for="tab1">Calendário de Vacinas</label>
+                <div class="content">
+                    <article class="calendario">
+                        <div id='calendar-individual'></div>
+                    </article>
+                    
+                    <div class="card border-light mb-3"  style="max-width: 18rem;">
+                        <div class="card-header"><i class="fas fa-times invisivel" id="fechar-card"></i></div>
+                        <div class="card-body text-dark" id="card-info">
+                            
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" class="tabs" id="tab2">
+                <label for="tab2">Gráfico de pesos</label>
+                <div class="content">
+                    <article class="peso">
+                        <section class="grafico-peso">
+                            <div>
+                                <canvas id="grafico-peso"></canvas>
+                            </div>
+                        </section>
+                        <section class="crud-peso">
+                            <div class="form-peso">
+                                @{
+                                    <form asp-action="CadastrarPeso" method="post">
+                                        <div class="row">
+                                            <div class="col">
+                                                <input id="field-descricao" type="text" asp-for="@Model.Registro.descricao" class="form-control" placeholder="Descrição" required>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <input id="field-observacao" type="text" asp-for="Peso.observacao" class="form-control" placeholder="Observação">
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <input id="field-peso" type="number" step="any" asp-for="Peso.peso" class="form-control" placeholder="Peso" required>
+                                            </div>
+                                            <div class="col">
+                                                <input id="field-dataPesagem" type="date" asp-for="Peso.dataPesagem" class="form-control" required>
+                                            </div>
+                                            <input id="field-idPet" type="hidden" asp-for="@Model.idPet" class="form-control" value="@Model.idPet" required>
+                                            <input id="field-idRegistro" type="hidden" asp-for="Registro.id" class="form-control">
+
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col">
+                                                @{
+                                                    <button id="btn-salvar" type="submit" asp-action="CadastrarPeso" class="btn btn-primary mb-2 ">Adicionar</button>
+                                                    <button id="btn-alterar" type="submit" asp-action="SalvarAlteracaoPeso" class="btn btn-primary mb-2 invisivel">Alterar</button>
+                                                }
+                                            </div>
+                                        </div>
+
+                                    </form>
+                                }
+                            </div>
+                            <div class="tabela-peso">
+
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+
+                                            <th scope="col">Descrição</th>
+                                            <th scope="col">Observação</th>
+                                            <th scope="col">Peso</th>
+                                            <th scope="col">Data da Pesagem</th>
+                                            <th scope="col">Editar</th>
+                                            <th scope="col">Excluir</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (IndexModelView peso in Model.ListaRegistrosPesos)
+                                        {
+                                            <tr>
+
+                                                <td>@peso.Registro.descricao</td>
+                                                <td>@peso.Peso.observacao</td>
+                                                <td>@peso.Peso.peso</td>
+                                                <td>@peso.Peso.dataPesagem</td>
+                                                <td data-id="@peso.Registro.id" data-tipo="@peso.Registro.tipoRegistro"><i class="fa-solid fa-pen bt-edit" aria-hidden="true" id="bt-edit"></i></td>
+                                                <td><a href="/Home/ExcluirPeso?idPeso=@peso.Registro.id&idPet=@peso.idPet"><i class="fa fa-trash"></i></a></td>
+                                            </tr>
+                                        }
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </section>
+                    </article>
+
+
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="tabs" class="tabs" id="tab3">
+                <label for="tab3">Incluir Vacina / medicamento</label>
+                <div class="content">
+                    <article class="medicamento">
+                        <section class="form-medicamentos">
+                            @{
+
+                                <div class="form-row align-items-center">
+                                    <div class="col-auto">
+                                        <input type="text" class="form-control mb-2 w-100" id="field-buscar" placeholder="Busque por vacina ou medicamento, digite o nome">
+                                    </div>
+                                    <div class="col-auto">
+                                        <button id="bt-buscar" class="btn btn-success mb-2">Buscar</button>
+                                        <button id="bt-limparBusca" class="btn btn-danger mb-2">Remover</button>
+                                    </div>
+                                </div>
+
+                            }
+
+                            @{
+                                <form id="formCadastroMedicamentoVacina" action="CadastrarMedicamento" method="post">
+                                    <div class="row">
+                                        <div class="col">
+                                            <input type="text" id="field-nome" asp-for="Medicamento.nome" class="form-control" placeholder="Nome do medicamento ou vacina" required>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <select asp-for="Registro.tipoRegistro" id="select-tipo" class="form-select form-select-lg mb-3" aria-label=".form-select-lg">
+                                                <option value="Medicamento" selected>Medicamento</option>
+                                                <option value="Vacina">Vacina</option>
+                                            </select>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <input id="field-descricao-med" type="text" class="form-control" asp-for="@Model.Registro.descricao" placeholder="Descrição" required>
+                                        </div>
+                                        <div class="col" id="div-dosagem">
+                                            <input type="text" id="field-dosagem" asp-for="Medicamento.dosagem" class="form-control" placeholder="Dosagem" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <input type="date" id="field-aplicacao" asp-for="Medicamento.aplicacao" class="form-control" placeholder="Aplicação" required>
+                                        </div>
+                                        <div class="col">
+                                            <input type="date" id="field-reaplicacao" asp-for="Medicamento.reaplicacao" class="form-control" placeholder="Reaplicação">
+                                        </div>
+                                        <input id="field-idPet-med" type="hidden" asp-for="@Model.idPet" class="form-control" value="@Model.idPet" required>
+                                        <input id="field-idRegistro-med" type="hidden" asp-for="Registro.id" class="form-control">
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col">
+                                            @{
+                                                <button type="submit" id="btn-form-medicamento" asp-action="CadastrarMedicamento" class="btn btn-success mb-2 ">Adicionar</button>
+
+                                                <button type="submit" id="btn-form-vacina" asp-action="CadastrarVacina" class="btn btn-success mb-2 invisivel">Adicionar</button>
+
+                                                <button type="submit" id="btn-form-medicamento-alter" asp-action="SalvarAlteracaoMedicamento" class="btn btn-success mb-2 invisivel">Alterar</button>
+
+                                                <button type="submit" id="btn-form-vacina-alter" asp-action="SalvarAlteracaoVacina" class="btn btn-success mb-2 invisivel">Alterar</button>
+                                            }
+                                        </div>
+
+                                    </div>
+
+                                </form>
+                            }
+                        </section>
+                        <section class="tabela-medicamentos">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+
+                                        <th scope="col">Descrição</th>
+                                        <th scope="col">Nome</th>
+                                        <th scope="col">Aplicação</th>
+                                        <th scope="col">Reaplicação</th>
+                                        <th scope="col">Dosagem</th>
+                                        <th scope="col">Editar</th>
+                                        <th scope="col">Excluir</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody id="conteudo-tabela">
+                                    @foreach (IndexModelView medicamento in Model.ListaRegistrosMedicamentos)
+                                    {
+                                        <tr>
+
+                                            <td>@medicamento.Registro.descricao</td>
+                                            <td>@medicamento.Medicamento.nome</td>
+                                            <td>@medicamento.Medicamento.aplicacao</td>
+                                            <td>@medicamento.Medicamento.reaplicacao</td>
+                                            <td>@medicamento.Medicamento.dosagem</td>
+                                            <td data-id="@medicamento.Registro.id" data-tipo="@medicamento.Registro.tipoRegistro"><i class="fa-solid fa-pen bt-edit" aria-hidden="true" id="bt-edit"></i></td>
+                                            <td><a href="/Home/ExcluirMedicamento?idMedicamento=@medicamento.Registro.id&idPet=@medicamento.idPet"><i class="fa fa-trash"></i></a></td>
+                                        </tr>
+                                    }
+                                    @foreach (IndexModelView vacina in Model.ListaRegistrosVacinas)
+                                    {
+                                        <tr>
+
+                                            <td>@vacina.Registro.descricao</td>
+                                            <td>@vacina.Vacina.nome</td>
+                                            <td>@vacina.Vacina.aplicacao</td>
+                                            <td>@vacina.Vacina.reaplicacao</td>
+                                            <td>-</td>
+                                            <td data-id="@vacina.Registro.id" data-tipo="@vacina.Registro.tipoRegistro"><i class="fa-solid fa-pen bt-edit" aria-hidden="true" id="bt-edit"></i></td>
+                                            <td><a href="/Home/ExcluirVacina?idVacina=@vacina.Registro.id&idPet=@vacina.idPet"><i class="fa fa-trash"></i></a></td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </section>
+
+                    </article>
+                </div>
+
+            </li>
+        </ul>
+        <a href="/Home/Main"><i class="fas fa-times"></i></a>
+    </nav>
+</div>
+
+
+@section Scripts{
+
+<script>
+     //função para prenchimento do formulário com as informações vinda do bd.
+     function preenheFormulario(dados, tipo) {
+         switch (tipo) {
+             case 'Peso':
+                 $("#field-descricao").val(dados.registro.descricao);
+                 $("#field-observacao").val(dados.peso.observacao);
+                 $("#field-peso").val(dados.peso.peso);
+                 $("#field-dataPesagem").val(dados.peso.dataPesagem);
+                 $("#field-idPet").val(dados.idPet);
+                 $("#field-idRegistro").val(dados.registro.id);
+                 $("#btn-alterar").removeClass('invisivel');
+                 $("#btn-salvar").addClass('invisivel');
+                 break;
+             case 'Medicamento':
+                 $("#field-nome").val(dados.medicamento.nome);
+                 $("#select-tipo").val(dados.registro.tipoRegistro).attr('disabled', true);
+                 $("#field-descricao-med").val(dados.registro.descricao);
+                 $("#field-aplicacao").val(dados.medicamento.aplicacao);
+                 $("#field-reaplicacao").val(dados.medicamento.reaplicacao);
+                 $("#field-idPet-med").val(dados.idPet);
+                 $("#field-idRegistro-med").val(dados.registro.id);
+                 $("#div-dosagem").html('<input type="text" id="field-dosagem" class="form-control" placeholder="Dosagem" required="" data-val="true" data-val-required="The dosagem field is required." name="Medicamento.dosagem">');
+                 $("#field-dosagem").val(dados.medicamento.dosagem)
+
+                 $("#field-dosagem").removeClass('invisivel');
+                 $("#btn-form-medicamento-alter").removeClass('invisivel');
+                 $("#btn-form-medicamento").addClass('invisivel');
+                 $("#btn-form-vacina-alter").addClass('invisivel');
+                 $("#btn-form-vacina").addClass('invisivel');
+                 break;
+             case 'Vacina':
+                 $("#field-nome").val(dados.vacina.nome);
+                 $("#select-tipo").val(dados.registro.tipoRegistro).attr('disabled', true);
+                 $("#select-tipo").val(dados.registro.tipoRegistro);
+                 $("#field-descricao-med").val(dados.registro.descricao);
+                 $("#field-aplicacao").val(dados.vacina.aplicacao);
+                 $("#field-reaplicacao").val(dados.vacina.reaplicacao);
+                 $("#field-idPet-med").val(dados.idPet);
+                 $("#field-idRegistro-med").val(dados.registro.id);
+                 $("#field-dosagem").addClass('invisivel');
+                 $("#div-dosagem").html("");
+                 $("#btn-form-medicamento-alter").addClass('invisivel');
+                 $("#btn-form-medicamento").addClass('invisivel');
+                 $("#btn-form-vacina-alter").removeClass('invisivel');
+                 $("#btn-form-vacina").addClass('invisivel');
+                 break;
+         }
+     }
+
+     //Tratamento do cadastro vacina ou medicamento.
+     $("#select-tipo").change(function () {
+         @ViewData["TipoRegistro"] = $("#select-tipo").val();
+         $("#formCadastroMedicamentoVacina").attr("action", "Cadastrar" + $("#select-tipo").val());
+         $("#btn-form-medicamento").attr("asp-action", "Cadastrar" + $("#select-tipo").val());
+         $("#field-nome").attr("asp-for", $("#select-tipo").val() + ".nome");
+         $("#field-aplicacao").attr("asp-for", $("#select-tipo").val() + ".aplicacao");
+         $("#field-reaplicacao").attr("asp-for", $("#select-tipo").val() + ".reaplicacao");
+         if ($("#select-tipo").val() == "Vacina") {
+             $("#field-dosagem").addClass('invisivel');
+             $("#div-dosagem").html("");
+             $("#btn-form-medicamento").addClass('invisivel');
+             $("#btn-form-vacina").removeClass('invisivel');
+
+         } else {
+             $("#div-dosagem").html('<input type="text" id="field-dosagem" asp-for="Medicamento.dosagem" class="form-control" placeholder="Dosagem" required>');
+             $("#field-dosagem").removeClass('invisivel');
+             $("#btn-form-vacina").addClass('invisivel');
+             $("#btn-form-medicamento").removeClass('invisivel');
+         }
+     })
+
+
+         //Requisição Ajax para preenchimento da Tela quando clicado o botão de alteração Peso.
+         $(document).on('click', ".bt-edit", function () {
+             var idReg = $(this).closest('td').attr('data-id');
+             var tipoReg = $(this).closest('td').attr('data-tipo');
+             var url = "@Url.Action("Alterar", "Home")" + tipoReg;
+             var parameters =
+                 {   'idPet': @Model.idPet,
+                     'idReg' : idReg,
+                     'tipoReg': tipoReg
+             };
+             $.post(url, parameters, function (response) {
+                 if (response) {
+                     preenheFormulario(response, tipoReg);
+                 }
+             })
+         })
+
+         $(document).on('click', "#bt-buscar", function () {
+
+             var textBuscado = $("#field-buscar").val();
+
+             buscar(textBuscado);
+
+         });
+     $(document).on('click', "#bt-limparBusca", function () {
+         buscar("");
+
+
+
+     });
+     function buscar(texto) {
+
+         var url = "@Url.Action("Buscar", "Home")";
+         var parameters =
+         {
+             'textBuscado': texto
+         };
+         $.post(url, parameters, function (response) {
+             if (response) {
+                 $("#conteudo-tabela").html("");
+                 $(response).each(function () {
+                     if (this.registro.tipoRegistro == "Medicamento") {
+                         var newLine = $("<tr>");
+                         var cols = "";
+                         cols += '<th scope="row">' + this.registro.id + '</th>';
+                         cols += '<td>' + this.registro.descricao + '</td>';
+                         cols += '<td>' + this.medicamento.nome + '</td>';
+                         cols += '<td>' + this.medicamento.aplicacao + '</td>';
+                         cols += '<td>' + this.medicamento.reaplicacao + '</td>';
+                         cols += '<td>' + this.medicamento.dosagem + '</td>';
+                         cols += '<td data-id="' + this.registro.id + '" data-tipo="' + this.registro.tipoRegistro + '"><i class="fa-solid fa-pen bt-edit" aria-hidden="true" id="bt-edit"></i></td>';
+                         cols += '<td><a href="/Home/ExcluirVacina?idVacina=' + this.registro.id + '&idPet=' + this.idPet + '"><i class="fa fa-trash"></i></a></td>'; newLine.append(cols);
+                         $("#conteudo-tabela").append(newLine);
+                     }
+                     if (this.registro.tipoRegistro == "Vacina") {
+                         var newLine = $("<tr>");
+                         var cols = "";
+                         cols += '<th scope="row">' + this.registro.id + '</th>';
+                         cols += '<td>' + this.registro.descricao + '</td>';
+                         cols += '<td>' + this.vacina.nome + '</td>';
+                         cols += '<td>' + this.vacina.aplicacao + '</td>';
+                         cols += '<td>' + this.vacina.reaplicacao + '</td>';
+                         cols += '<td>-</td>';
+                         cols += '<td data-id="' + this.registro.id + '" data-tipo="' + this.registro.tipoRegistro + '"><i class="fa-solid fa-pen bt-edit" aria-hidden="true" id="bt-edit"></i></td>';
+                         cols += '<td><a href="/Home/ExcluirVacina?idVacina=' + this.registro.id + '&idPet=' + this.idPet + '"><i class="fa fa-trash"></i></a></td>';
+                         newLine.append(cols);
+                         $("#conteudo-tabela").append(newLine);
+                     }
+                 });
+             }
+         });
+     }
+
+     //implementação do grafico de pesos
+     var url = "@Url.Action("GetJsonPesos", "Home")";
+     var parametros = {
+         'idPet': @Model.idPet
+     };
+     async function getDadosGrafico(){
+         var dados = [];
+         $.get(url, parametros, function(response){
+             var arrayPesos = Array.from(response);
+             var arrayValoresPesos=[];
+             var arrayDataPesagem = [];
+
+             arrayPesos.forEach((e)=>{
+                 arrayValoresPesos.push(e.peso.peso);
+                 arrayDataPesagem.push(e.peso.dataPesagem);
+             });
+             dados.push(arrayValoresPesos);;
+             dados.push(arrayDataPesagem);
+
+             const labels = dados[1];
+             const valores = dados[0];
+             var vetorMedia = [];
+             var media  = 0;
+             for(let elem in valores){
+                 media += valores[elem];
+             }
+             media = media/valores.length;
+             for(let elem in dados[0]){
+                 vetorMedia.push(media);
+             }
+
+             const data = {
+
+                 labels: labels,//receber um array com as datas
+                 datasets: [
+                     {
+                     label: 'Média',
+                     type:'line',
+                     backgroundColor: 'rgb(120, 99, 132)',
+                     borderColor: 'rgb(120, 99, 132)',
+                     data:vetorMedia , //receber um array com os pesos
+                 },
+                     {
+                     label: 'Histórico de pesos',
+                     backgroundColor: 'rgb(255, 99, 132)',
+                     borderColor: 'rgb(255, 99, 132)',
+                     data:valores , //receber um array com os pesos
+                 }]
+             };
+
+             const config = {
+                 type: 'bar',
+                 data: data,
+                 options: {
+                     maintainAspectRatio: false
+                 }
+             };
+
+             const myChart = new Chart(
+                 document.getElementById('grafico-peso'),
+                 config
+             );
+         });
+     }
+     getDadosGrafico().then((r)=>{});
+
+
+     //implementação do calendário individual do pet
+
+     var url = "@Url.Action("GetJsonCalendario", "Home")";
+     var parametros = {
+         'idPet': @Model.idPet
+     };
+     async function getDadosCalendario(){
+         var dados=[];
+         await $.get(url, parametros, function(response){
+
+             var arrayEventos = Array.from(response);
+             arrayEventos.forEach((elemento)=>{
+                 if(elemento.registro.tipoRegistro=="Medicamento"){
+                     var obj1 = {
+                         title: elemento.medicamento.nome,
+                         description: elemento.registro.descricao,
+                         data: elemento.medicamento.aplicacao ,
+                         start: elemento.medicamento.aplicacao,
+                         end: elemento.medicamento.aplicacao,
+                         color: 'blue'
+                     };
+                     if(elemento.medicamento.reaplicacao != null){
+                         var obj2 = {
+                         title: elemento.medicamento.nome,
+                         description: elemento.registro.descricao,
+                         data: elemento.medicamento.reaplicacao,
+                         start: elemento.medicamento.reaplicacao,
+                         end: elemento.medicamento.reaplicacao,
+                         color: 'red'
+                        }
+                     }
+
+                 }
+                 if(elemento.registro.tipoRegistro=="Vacina"){
+                     var obj1 = {
+                         title: elemento.vacina.nome,
+                         description: elemento.registro.descricao,
+                         data: elemento.vacina.aplicacao,
+                         start: elemento.vacina.aplicacao,
+                         end: elemento.vacina.aplicacao,
+                         color: 'green'
+                     };
+                     if(elemento.vacina.reaplicacao != null){
+                         var obj2 = {
+                         title: elemento.vacina.nome,
+                         description: elemento.registro.descricao,
+                         data: elemento.vacina.reaplicacao,
+                         start: elemento.vacina.reaplicacao,
+                         end: elemento.vacina.reaplicacao,
+                         color: 'red'
+                        };
+                     }
+                 }
+                 dados.push(obj1);
+                 if(obj2 !=null){
+                    dados.push(obj2);
+                 }
+
+
+             });
+
+
+         });
+
+         return dados;
+
+     }
+
+     async function geraCalendario(dados){
+
+     }
+
+    document.addEventListener('DOMContentLoaded', async function () {
+
+            var cardInfo = document.getElementById('card-info');
+            var fecharCard = document.getElementById('fechar-card');
+             var calendarEl = document.getElementById('calendar-individual');
+             var eventos=[];
+             await getDadosCalendario().then(res=>{
+                 res.forEach(ele=>eventos.push(ele))
+             });
+             fecharCard.addEventListener('click', ()=>{
+                 cardInfo.classList.add('invisivel');
+                    fecharCard.classList.add('invisivel');
+             });
+             var calendar = new FullCalendar.Calendar(calendarEl, {
+                 initialView: 'dayGridMonth',
+                 eventClick: function(info) {
+                      cardInfo.classList.remove('invisivel');
+                      fecharCard.classList.remove('invisivel');
+
+                         cardInfo.innerHTML = `
+
+
+
+                        
+                            <h5 class="card-title">${info.event.title}</h5>
+                            <p class="card-text">*${info.event.extendedProps.description}</p>
+                            <p class="card-text">*${info.event.extendedProps.data}</p>
+                       
+                     `;
+
+
+
+
+                    info.el.style.borderColor = 'red';
+                  },
+                  eventMouseEnter: function(info) {
+
+                    info.el.style.borderColor = 'Black';
+                  },
+                  eventMouseLeave: function(info) {
+
+                    info.el.style.borderColor = 'White';
+                  }
+
+
+
+             });
+             calendar.setOption('locale', 'pt-br');
+             calendar.addEventSource( eventos );
+             calendar.render();
+         });
+
+</script>
+
+
+
+}
+

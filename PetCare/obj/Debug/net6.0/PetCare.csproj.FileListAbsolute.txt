@@ -1,0 +1,84 @@
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Debug\net6.0\PetCare.csproj.AssemblyReference.cache
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Debug\net6.0\PetCare.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Debug\net6.0\PetCare.AssemblyInfoInputs.cache
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Debug\net6.0\PetCare.AssemblyInfo.cs
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Debug\net6.0\PetCare.csproj.CoreCompileInputs.cache
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Debug\net6.0\PetCare.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Debug\net6.0\PetCare.RazorAssemblyInfo.cache
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Debug\net6.0\PetCare.RazorAssemblyInfo.cs
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\bin\Debug\net6.0\appsettings.json
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\bin\Debug\net6.0\PetCare.staticwebassets.runtime.json
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\bin\Debug\net6.0\PetCare.exe
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\bin\Debug\net6.0\PetCare.deps.json
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\bin\Debug\net6.0\PetCare.runtimeconfig.json
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\bin\Debug\net6.0\PetCare.dll
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\bin\Debug\net6.0\PetCare.pdb
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\bin\Debug\net6.0\MySqlConnector.dll
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Debug\net6.0\scopedcss\bundle\PetCare.styles.css
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Debug\net6.0\scopedcss\projectbundle\PetCare.bundle.scp.css
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Debug\net6.0\PetCare.csproj.CopyComplete
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Debug\net6.0\PetCare.dll
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Debug\net6.0\refint\PetCare.dll
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Debug\net6.0\PetCare.pdb
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Debug\net6.0\PetCare.genruntimeconfig.cache
+C:\Users\BRUNO\Desktop\PetCare\PetCare\PetCare\obj\Debug\net6.0\ref\PetCare.dll
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\bin\Debug\net6.0\appsettings.json
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\bin\Debug\net6.0\PetCare.staticwebassets.runtime.json
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\bin\Debug\net6.0\PetCare.exe
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\bin\Debug\net6.0\PetCare.deps.json
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\bin\Debug\net6.0\PetCare.runtimeconfig.json
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\bin\Debug\net6.0\PetCare.dll
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\bin\Debug\net6.0\PetCare.pdb
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\bin\Debug\net6.0\MySqlConnector.dll
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\obj\Debug\net6.0\PetCare.csproj.AssemblyReference.cache
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\obj\Debug\net6.0\PetCare.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\obj\Debug\net6.0\PetCare.AssemblyInfoInputs.cache
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\obj\Debug\net6.0\PetCare.AssemblyInfo.cs
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\obj\Debug\net6.0\PetCare.csproj.CoreCompileInputs.cache
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\obj\Debug\net6.0\PetCare.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\obj\Debug\net6.0\PetCare.RazorAssemblyInfo.cache
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\obj\Debug\net6.0\PetCare.RazorAssemblyInfo.cs
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\obj\Debug\net6.0\scopedcss\bundle\PetCare.styles.css
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\obj\Debug\net6.0\scopedcss\projectbundle\PetCare.bundle.scp.css
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\obj\Debug\net6.0\PetCare.csproj.CopyComplete
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\obj\Debug\net6.0\PetCare.dll
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\obj\Debug\net6.0\refint\PetCare.dll
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\obj\Debug\net6.0\PetCare.pdb
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\obj\Debug\net6.0\PetCare.genruntimeconfig.cache
+C:\Users\BRUNO\Documents\GitHub\petcare-deploy-backend\PetCare\obj\Debug\net6.0\ref\PetCare.dll
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\bin\Debug\net6.0\appsettings.Development.json
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\bin\Debug\net6.0\appsettings.json
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\bin\Debug\net6.0\PetCare.staticwebassets.runtime.json
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\bin\Debug\net6.0\PetCare.exe
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\bin\Debug\net6.0\PetCare.deps.json
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\bin\Debug\net6.0\PetCare.runtimeconfig.json
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\bin\Debug\net6.0\PetCare.dll
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\bin\Debug\net6.0\PetCare.pdb
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\bin\Debug\net6.0\MySqlConnector.dll
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\obj\Debug\net6.0\PetCare.csproj.AssemblyReference.cache
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\obj\Debug\net6.0\PetCare.GeneratedMSBuildEditorConfig.editorconfig
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\obj\Debug\net6.0\PetCare.AssemblyInfoInputs.cache
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\obj\Debug\net6.0\PetCare.AssemblyInfo.cs
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\obj\Debug\net6.0\PetCare.csproj.CoreCompileInputs.cache
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\obj\Debug\net6.0\PetCare.MvcApplicationPartsAssemblyInfo.cache
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\obj\Debug\net6.0\PetCare.RazorAssemblyInfo.cache
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\obj\Debug\net6.0\PetCare.RazorAssemblyInfo.cs
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\obj\Debug\net6.0\staticwebassets.build.json
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\obj\Debug\net6.0\staticwebassets.development.json
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\obj\Debug\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\obj\Debug\net6.0\scopedcss\bundle\PetCare.styles.css
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\obj\Debug\net6.0\scopedcss\projectbundle\PetCare.bundle.scp.css
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\obj\Debug\net6.0\PetCare.csproj.CopyComplete
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\obj\Debug\net6.0\PetCare.dll
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\obj\Debug\net6.0\refint\PetCare.dll
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\obj\Debug\net6.0\PetCare.pdb
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\obj\Debug\net6.0\PetCare.genruntimeconfig.cache
+G:\Outros computadores\PedroPC\REPOSITORIOS\PetCare-\PetCare\PetCare\obj\Debug\net6.0\ref\PetCare.dll
