@@ -1,0 +1,155 @@
+﻿@model IndexModelView;
+@using Microsoft.AspNetCore.Http;
+@using PetCare.Models
+
+@{
+    ViewData["Title"] = "Calendário geral";
+}
+
+
+<div class="painel-secundario">
+    <div class="bt-fechar">
+        <a href="/Home/Main"><i class="fas fa-times"></i></a>
+    </div>
+    <nav class="nav-tabs">
+        <ul>
+            <li>
+                <input type="radio" name="tabs" class="tabs" id="tab1" checked>
+                <div class="content">
+                    <article class="calendario">
+                        <div id='calendar-geral'></div>
+                    </article>
+                    <div class="card border-light mb-3"  style="max-width: 18rem;">
+                        <div class="card-header"><i class="fas fa-times invisivel" id="fechar-card"></i></div>
+                        <div class="card-body text-dark" id="card-info">
+                            
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+
+@section Scripts{
+
+<script>
+
+     //implementação do calendário geral do usuario
+
+     var url = "@Url.Action("GetJsonCalendarioGeral", "Home")";
+
+     async function getDadosCalendario(){
+         var dados=[];
+         await $.get(url , function(response){
+
+             var arrayEventos = Array.from(response);
+             arrayEventos.forEach((elemento)=>{
+                 if(elemento.registro.tipoRegistro=="Medicamento"){
+                     var obj1 = {
+                         title: elemento.medicamento.nome,
+                         description: elemento.registro.descricao,
+                         data: elemento.medicamento.aplicacao ,
+                         start: elemento.medicamento.aplicacao,
+                         end: elemento.medicamento.aplicacao,
+                         color: 'blue'
+                     };
+                     if(elemento.medicamento.reaplicacao != null){
+                         var obj2 = {
+                         title: elemento.medicamento.nome,
+                         description: elemento.registro.descricao,
+                         data: elemento.medicamento.reaplicacao,
+                         start: elemento.medicamento.reaplicacao,
+                         end: elemento.medicamento.reaplicacao,
+                         color: 'red'
+                        }
+                     }
+
+                 }
+                 if(elemento.registro.tipoRegistro=="Vacina"){
+                     var obj1 = {
+                         title: elemento.vacina.nome,
+                         description: elemento.registro.descricao,
+                         data: elemento.vacina.aplicacao,
+                         start: elemento.vacina.aplicacao,
+                         end: elemento.vacina.aplicacao,
+                         color: 'green'
+                     };
+                     if(elemento.vacina.reaplicacao != null){
+                         var obj2 = {
+                         title: elemento.vacina.nome,
+                         description: elemento.registro.descricao,
+                         data: elemento.vacina.reaplicacao,
+                         start: elemento.vacina.reaplicacao,
+                         end: elemento.vacina.reaplicacao,
+                         color: 'red'
+                        };
+                     }
+                 }
+                 }
+
+                 dados.push(obj1);
+                  if(obj2 !=null){
+                     dados.push(obj2);
+                  }
+
+             });
+
+
+         });
+
+
+         return dados;
+
+     }
+
+    document.addEventListener('DOMContentLoaded', async function () {
+        var cardInfo = document.getElementById('card-info');
+            var fecharCard = document.getElementById('fechar-card');
+             var calendarEl = document.getElementById('calendar-geral');
+             var eventos=[];
+             await getDadosCalendario().then(res=>{
+                 res.forEach(ele=>eventos.push(ele))
+             });
+             fecharCard.addEventListener('click', ()=>{
+                 cardInfo.classList.add('invisivel');
+                    fecharCard.classList.add('invisivel');
+             });
+             var calendar = new FullCalendar.Calendar(calendarEl, {
+                 initialView: 'dayGridMonth',
+                 eventClick: function(info) {
+                     cardInfo.classList.remove('invisivel');
+                      fecharCard.classList.remove('invisivel');
+
+                         cardInfo.innerHTML = `
+
+
+
+                        
+                            <h5 class="card-title">${info.event.title}</h5>
+                            <p class="card-text">*${info.event.extendedProps.description}</p>
+                            <p class="card-text">*${info.event.extendedProps.data}</p>
+                       
+                     `;
+                     info.el.style.borderColor = 'red';
+                   },
+                   eventMouseEnter: function(info) {
+
+                     info.el.style.borderColor = 'Black';
+                   },
+                   eventMouseLeave: function(info) {
+
+                     info.el.style.borderColor = 'White';
+                   }
+             });
+             calendar.setOption('locale', 'pt-br');
+             calendar.addEventSource( eventos );
+             calendar.render();
+         });
+
+</script>
+
+
+}

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "aq0Cp8SHSEgnV4soJFrYxz6qKWHgTEORM/QShFflBnVprLHWTBLeFpm4n8TWa34UtsZBgiZcEEoW6vWEt2tElw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\BRUNO\\Documents\\GitHub\\petcare-deploy-backend\\PetCare\\PetCare.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\BRUNO\\.nuget\\packages\\mysqlconnector\\2.1.8\\mysqlconnector.2.1.8.nupkg.sha512"
+  ],
+  "logs": []
+}

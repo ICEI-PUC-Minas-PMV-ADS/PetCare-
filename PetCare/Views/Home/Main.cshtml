@@ -1,0 +1,90 @@
+﻿@using Microsoft.AspNetCore.Http;
+@model IEnumerable<Pet>;
+
+@{
+    ViewData["Title"] = "Cuidados com seu pet!";
+}
+
+@{
+    if (Model.Count() > 0 && Model.Count() < 6)
+    {
+        foreach (Pet p in Model)
+        {
+            <article class="card-pet">
+                <div class="wrp-img">
+                   
+                        
+                            @{
+                                ViewData["caminhoImagem"] = p.imagem;
+                                <img id="imgPerfil" src="@ViewData["caminhoImagem"]" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                            }
+                        
+
+                </div>
+                <div class="infos-pet">
+                    <h3>@p.nome</h3>
+                    <h4>@p.especie</h4>
+                    <h5>@p.raca</h5>
+                </div>
+                <div class="acoes">
+                    <a class="btn btn-success" href="/Home/CuidarPet?idPet=@p.id">Cuidar</a>
+                    <a class="btn btn-success" href="/Home/AlterarPet?idPet=@p.id">Editar</a>
+                </div>
+            </article>
+        }
+        <article class="card-add">
+            <div class="wrp">
+                <a href="/Home/CadastroPet">
+                    <div class="circle">
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </a>
+            </div>
+        </article>
+    }
+    else
+    {
+        if (Model.Count() == 0)
+        {
+            <article class="card-add">
+                <div class="wrp">
+                    <a href="/Home/CadastroPet">
+                        <div class="circle">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </a>
+                </div>
+            </article>
+        }
+        else
+        {
+            foreach (Pet p in Model)
+            {
+                <article class="card-pet">
+                    <div class="wrp-img">
+                        
+                       
+                            @{
+                                ViewData["caminhoImagem"] = p.imagem;
+                                <img id="imgPerfil" src="@ViewData["caminhoImagem"]" class="figure-img img-fluid rounded" alt="A generic square placeholder image with rounded corners in a figure.">
+                            }
+                        
+
+                   
+                    </div>
+                    <div class="infos-pet">
+                        <h3>@p.nome</h3>
+                        <h4>@p.especie</h4>
+                        <h5>@p.raca</h5>
+                    </div>
+                    <div class="acoes">
+                        <a class="btn btn-primary btn-sucess" href="/Home/CuidarPet?idPet=@p.id">Cuidar</a>
+                        <a class="btn  btn-primary btn-sucess" href="/Home/AlterarPet?idPet=@p.id">Editar</a>
+
+                    </div>
+                </article>
+            }
+        }
+
+    }
+}

@@ -1,0 +1,91 @@
+﻿@model IndexModelView;
+@using Microsoft.AspNetCore.Http;
+@using PetCare.Models
+
+@{
+    ViewData["Title"] = "Calendário geral";
+}
+
+
+<div class="painel-secundario">
+    <nav class="nav-tabs">
+        <ul>
+            <li>
+                <input type="radio" name="tabs" class="tabs" id="tab1" checked>
+                <label for="tab1">Calendário de Vacinas</label>
+                <div class="content">
+                    <article class="calendario">
+                        <div id='calendar-geral'></div>
+                    </article>
+                </div>
+            </li>
+
+            <a href="/Home/Main"><i class="fas fa-times"></i></a>
+    </nav>
+</div>
+
+
+
+@section Scripts{
+
+<script>
+    
+    //implementação do calendário geral do usuario
+    
+    var url = "@Url.Action("GetJsonCalendarioGeral", "Home")";
+    
+    async function getDadosCalendario(){
+        var dados=[];
+        await $.get(url , function(response){
+            
+            var arrayEventos = Array.from(response);
+            arrayEventos.forEach((elemento)=>{
+                if(elemento.registro.tipoRegistro=="Medicamento"){
+                    var obj = {
+                        title: elemento.medicamento.nome,
+                        description: elemento.registro.descricao,
+                        start: elemento.medicamento.aplicacao,
+                        end: elemento.medicamento.aplicacao
+                    };
+                }
+                if(elemento.registro.tipoRegistro=="Vacina"){
+                    var obj = {
+                        title: elemento.vacina.nome,
+                        description: elemento.registro.descricao,
+                        start: elemento.vacina.aplicacao,
+                        end: elemento.vacina.aplicacao
+                    };
+                }
+                
+                dados.push(obj);
+
+            });
+            
+
+        });
+        
+        
+        return dados;
+        
+    }
+    
+   document.addEventListener('DOMContentLoaded', async function () {
+            var calendarEl = document.getElementById('calendar-geral');
+            var eventos=[];
+            await getDadosCalendario().then(res=>{
+                res.forEach(ele=>eventos.push(ele))
+            });
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                initialView: 'dayGridMonth',
+
+            });
+            calendar.setOption('locale', 'pt-br');
+            calendar.addEventSource( eventos );
+            calendar.render();
+        });
+
+</script>
+
+
+}
