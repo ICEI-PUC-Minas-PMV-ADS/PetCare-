@@ -40,34 +40,34 @@ Os testes de usabilidade a serem realizados no aplicativo são descritos a segui
 
 Para esta etapa do projeto, os testes serão realizados nas principais funcionalidades do sistema: login, cadastro do usuário, cadastro do pet e cadastro de vacinas. 
 
-|Tarefa 1| Critério de êxito | O que será avaliado |
-|--------|-------------------|---------------------|
+|Tarefa 1| ✨ Critério de êxito                                                   | O que será avaliado |
+|--------|-----------------------------------------------------------------------|---------------------|
 |Fazer o login no sistema | Conseguir logar no sistema e ser encaminhado para a página de cadastro |Concretização da tarefa. Quantidade de erros cometidos.
 
-| Tarefa 2                     | ✨ Critério de êxito                                                           | O que será avaliado |
-|------------------------------|-------------------------------------------------------------------------------|---------------------|
-| Cadastro de novo usuário     | Concluir o cadastro, considerando a mensagem "Cadastro realizado com sucesso" |Concretização da tarefa. <br/>Quantidade de erros cometidos. <br/>Tempo necessario para se concluir|
-| Inserir foto do novo usuário | Salvar foto no perfil, considerando possibilidade de visualizar a imagem      |Concretização da tarefa. <br/>Quantidade de erros cometidos. <br/>Tempo necessario para se concluir|
-| Editar dados do usuário      | Alterar um campo, considerando a mensagem "Salvo com sucesso"                 |Concretização da tarefa. <br/>Quantidade de erros cometidos. <br/>Tempo necessario para se concluir|
-| Excluir cadastro do usuário  | Excluir conta do sistema, retornando para página de novo cadastro.            |Concretização da tarefa. <br/>Quantidade de erros cometidos. <br/>Tempo necessario para se concluir|
+| Tarefa 2                       | ✨ Critério de êxito                                                           | O que será avaliado |
+|--------------------------------|-------------------------------------------------------------------------------|---------------------|
+| - Cadastro de novo usuário     | Concluir o cadastro, considerando a mensagem "Cadastro realizado com sucesso" |Concretização da tarefa. <br/>Quantidade de erros cometidos. <br/>Tempo necessario para se concluir|
+| - Inserir foto do novo usuário | Salvar foto no perfil, considerando possibilidade de visualizar a imagem      |Concretização da tarefa. <br/>Quantidade de erros cometidos. <br/>Tempo necessario para se concluir|
+| - Editar dados do usuário      | Alterar um campo, considerando a mensagem "Salvo com sucesso"                 |Concretização da tarefa. <br/>Quantidade de erros cometidos. <br/>Tempo necessario para se concluir|
+| - Excluir cadastro do usuário  | Excluir conta do sistema, retornando para página de novo cadastro.            |Concretização da tarefa. <br/>Quantidade de erros cometidos. <br/>Tempo necessario para se concluir|
 
-| Tarefa 3             | ✨ Critério de êxito                                                           | O que será avaliado |
-|----------------------|-------------------------------------------------------------------------------|---------------------|
-| Cadastro de novo pet | Concluir o cadastro, considerando a mensagem "Cadastro realizado com sucesso" |Concretização da tarefa. <br/>Quantidade de erros cometidos. <br/>Tempo necessário para se concluir|
-| Editar pet           | Alterar um campo, considerando a mensagem "Salvo com sucesso"                 |Concretização da tarefa. <br/>Quantidade de erros cometidos. <br/>Tempo necessário para se concluir|
-| Inserir fotos do pet            | Inserir uma imagem ou foto e visualizar no perfil do pet                      |Concretização da tarefa. <br/>Quantidade de erros cometidos. <br/>Tempo necessário para se concluir|
-| Excluir pet          | Excluir cadastro, voltando para a tela principal.                             |Concretização da tarefa. <br/>Quantidade de erros cometidos. <br/>Tempo necessário para se concluir|
+| Tarefa 3               | ✨ Critério de êxito                                                           | O que será avaliado |
+|------------------------|-------------------------------------------------------------------------------|---------------------|
+| - Cadastro de novo pet | Concluir o cadastro, considerando a mensagem "Cadastro realizado com sucesso" |Concretização da tarefa. <br/>Quantidade de erros cometidos. <br/>Tempo necessário para se concluir|
+| - Editar pet           | Alterar um campo, considerando a mensagem "Salvo com sucesso"                 |Concretização da tarefa. <br/>Quantidade de erros cometidos. <br/>Tempo necessário para se concluir|
+| - Inserir fotos do pet | Inserir uma imagem ou foto e visualizar no perfil do pet                      |Concretização da tarefa. <br/>Quantidade de erros cometidos. <br/>Tempo necessário para se concluir|
+| - Excluir pet          | Excluir cadastro, voltando para a tela principal.                             |Concretização da tarefa. <br/>Quantidade de erros cometidos. <br/>Tempo necessário para se concluir|
 
-| Tarefa 4                     | ✨ Critério de êxito                                                                              | O que será avaliado |
-|------------------------------|--------------------------------------------------------------------------------------------------|---------------------|
-| Cadastro de vacina do pet    | Inserir nome da vacina no item calendário, salvando o nome no campo.                             |Concretização da tarefa. <br/>Quantidade de erros cometidos. <br/>Tempo necessário para se concluir|
-| Calendário de datas do pet   | Inserir um evento no item calendário, salvando o item no perfil.                                 |Concretização da tarefa. <br/>Quantidade de erros cometidos. <br/>Tempo necessário para se concluir|
-| Excluir evento/data e vacina | Excluir um evento no item calendário, bem como uma vacina registrada, salvando o item no perfil. |Concretização da tarefa. <br/>Quantidade de erros cometidos. <br/>Tempo necessário para se concluir|
+| Tarefa 4                       | ✨ Critério de êxito                                                                              | O que será avaliado |
+|--------------------------------|--------------------------------------------------------------------------------------------------|---------------------|
+| - Cadastro de vacina do pet    | Inserir nome da vacina no item calendário, salvando o nome no campo.                             |Concretização da tarefa. <br/>Quantidade de erros cometidos. <br/>Tempo necessário para se concluir|
+| - Calendário de datas do pet   | Inserir um evento no item calendário, salvando o item no perfil.                                 |Concretização da tarefa. <br/>Quantidade de erros cometidos. <br/>Tempo necessário para se concluir|
+| - Excluir evento/data e vacina | Excluir um evento no item calendário, bem como uma vacina registrada, salvando o item no perfil. |Concretização da tarefa. <br/>Quantidade de erros cometidos. <br/>Tempo necessário para se concluir|
 
-| Tarefa 5                  | ✨ Critério de êxito                                                                | O que será avaliado |
-|---------------------------|------------------------------------------------------------------------------------|---------------------|
-| Sair do sistema | O usuário deve conseguir sair do sistema facilmente, clicando em "Sair".           |Concretização da tarefa. <br/>Quantidade de erros cometidos. <br/>Tempo necessário para se concluir|
-| Logar novamente no sistema | Usuário deverá logar novamente e verificar que seus dados foram salvos no sistema. |Concretização da tarefa. <br/>Quantidade de erros cometidos. <br/>Tempo necessário para se concluir|
+| Tarefa 5                     | ✨ Critério de êxito                                                                | O que será avaliado |
+|------------------------------|------------------------------------------------------------------------------------|---------------------|
+| - Sair do sistema            | O usuário deve conseguir sair do sistema facilmente, clicando em "Sair".           |Concretização da tarefa. <br/>Quantidade de erros cometidos. <br/>Tempo necessário para se concluir|
+| - Logar novamente no sistema | Usuário deverá logar novamente e verificar que seus dados foram salvos no sistema. |Concretização da tarefa. <br/>Quantidade de erros cometidos. <br/>Tempo necessário para se concluir|
 
 ### Objetivo
 
