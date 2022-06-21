@@ -3,7 +3,6 @@
 *Para o desenvolvimento do teste optamos por selecionar um grupo de pessoas focais com o intuito de verificar o comportamento, medindo e considerando as reações dos usuários diante das funcionalidades da aplicação através do feedback gerado pelo formulário que será disponibilizado para cada usuário, junto com as instruções para a realização do testes. 
 Após a realização, será feita uma análise de usabilidade e das principais dificuldades*. 
 
-**Os requisitos para realização dos testes de usabilidade são**:
 - Site publicado na Internet
 - Navegador da Internet - Chrome, Firefox ou Edge
 - Conectividade de Internet para acesso às plataformas (APISs) 
