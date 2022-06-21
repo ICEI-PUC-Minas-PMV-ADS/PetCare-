@@ -1,4 +1,4 @@
-# ✓ Instruções de utilização
+# Instruções de utilização
 
 1. Deve-se acessar o endereço [PetCare](https://petcare-deploy.herokuapp.com/) no navegador; 
 2. Pode-se navegar entre as páginas; 
@@ -6,11 +6,11 @@
 4. Após a criação do cadastro, o usuário deve realizar o login para acessar funcionalidades como por exemplo, "Cadastrar Pet"; 
 5. Na principal o usuário visualizará as principais ferramentas, como "**Meus Pets**", "**Minha Conta**", "**Calendario de Vacinas**" e "**Sair**".
 
-## ✓ Instalação do Site
+## Instalação do Site
 
 O site em HTML/CSS/JS pode ser visualizado nos navegadores mais usuais, como Chrome e Mozilla.
 
-## ✓ Histórico de versões
+## Histórico de versões
 
 ### [0.1.0] - 03/04/2022
 #### ✓ Adicionado
