@@ -14,8 +14,8 @@ O site em HTML/CSS/JS pode ser visualizado nos navegadores mais usuais, como Chr
 
 ### [0.1.0] - 03/04/2022
 #### Adicionado
-- Documentação de Contexto;
-- Especificação do Projeto.
+☛ Documentação de Contexto;
+☛ Especificação do Projeto.
 
 ### [0.2.0] - 24/04/2022
 #### Adicionado
