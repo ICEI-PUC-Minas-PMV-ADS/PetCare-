@@ -18,14 +18,14 @@ Os testes de usabilidade a serem realizados no aplicativo são descritos a segui
 ||4) Análise do Teste;
 ||5) Avaliação da aplicação por meio de Heurística.
 
-|   | ** 📌 Passo a passo** 
+|   | **📌Passo a passo** 
 | ------------------- | ------------------- |
 ||1) Serão selecionadas 10 pessoas para análise da aplicação.
 ||2) Será enviado para cada o link da nossa aplicação juntamente com o vídeo explicativo de como navegar por ela e o formulário onde encontram os pontos a serem analisados como descrito abaixo.
-||3) 1º desafio: se cadastrar e logo em seguida fazer o login na aplicação.
+||3) 1º desafio: se cadastrar e em seguida fazer o login na aplicação.
 ||4) 2º desafio: realizar o cadastro de um pet
 ||5) 3º desafio: inserir dados de vacina e medicamento no calendário para ser notificado do compromisso.
-||6) Por fim, navegar pela aplicação naturalmente, como se estivesse realizando a ação em suas casas.
+||6) Por fim, navegar pela aplicação naturalmente.
 
 |   | **📌 Itens a serem avaliados pós teste** 
 | ------------------- | ------------------- |
