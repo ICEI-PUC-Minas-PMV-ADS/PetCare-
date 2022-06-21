@@ -13,16 +13,16 @@ Para acessar o sistema, é necessário realizar o cadastrado.
 Caso não seja cadastrado, o usuário é redirecionado para a tela de Cadastro.
 O usuário deve informar seus dados para ter acesso ao sistema.
 
-- caso a senha esteja errada, uma mensagm de erro é informada: "*não é possível fazer seu login, tente novamente."*
+- caso a senha esteja errada, uma mensagm de erro é informada: "*Não foi possivel fazer seu login. Tente novamente!"*
 
-![image](https://user-images.githubusercontent.com/78277341/168466923-f5b70577-6753-432c-b87c-b04949751f2d.png)
+![image](https://user-images.githubusercontent.com/78277341/174906654-718af486-8a7a-4819-9759-d1ec7cd93004.png)
 
 
-## 2. Testando tela de *Cadastro*:
+## 2. Testando tela de *Cadastrar usuários*:
 
 Na tela de cadastro, é possivel registrar ***nome, email, data de nascimento e senha***.
 
-![image](https://user-images.githubusercontent.com/78277341/168466604-1840a37c-bffb-409f-a66f-bb94a11709b5.png)
+![image](https://user-images.githubusercontent.com/78277341/174906780-dbdc70de-ebee-4db9-aab7-06cb71e06ebf.png)
 
 ### :point_right: Observações importantes:
 Neste ponto, a equipe verificou que:
@@ -41,12 +41,13 @@ Seguindo o plano de testes, realizado o cadastro corretamente e efetuado o login
 
 Na parte principal da tela, é possivel visualizar a ferramenta “**+**” para inserir os dados do pet. Vejamos:
 
-![image](https://user-images.githubusercontent.com/78277341/168466998-5506260b-85e1-4d41-bed2-0d4852ac45ea.png)
+![image](https://user-images.githubusercontent.com/78277341/174906970-384620bb-915d-4bd8-b6cb-5fef851261e1.png)
 
-## 4. Testando a tela *Minha Conta*:
+## 4. Testando a tela *Editar Minha Conta*:
 Nesta ferramenta, verificamos que o usuário poderá alterar seus dados ou excluir sua conta. Para isso, terá que confirmar sua senha..
 
-![image](https://user-images.githubusercontent.com/78277341/168467041-42bbcac8-a207-40bc-9ff5-17d0a8e7eed5.png)
+![image](https://user-images.githubusercontent.com/78277341/174907127-3e79ccb2-9926-4954-93c0-80e13c11e761.png)
+
 ### :point_right: Observações importantes:
 Neste ponto, a equipe verificou que:
 - Caso o usuário informe a senha incorreta, o sistema informa: *"Não foi possível alterar os dados"*.
@@ -54,11 +55,7 @@ Neste ponto, a equipe verificou que:
 - Caso a conta seja excluída, o sistema retorna à pagina de login e só é possível entrar novamente no sistema após realizar um novo cadastro.
 
 
-  ![image](https://user-images.githubusercontent.com/78277341/168467172-206c1d78-3a4c-4050-a2c5-606ee6786889.png)
-
-:point_right: Também foi verificado que algumas melhorias devem ser aplicadas:
-
-- Ainda não é possível guardar as imagens ou fotos inseridas pelo usuário no campo do perfil.
+:point_right: É possível guardar as imagens ou fotos inseridas pelo usuário no campo do perfil.
 
 ## 5. Testando a tela *Meus Pets*:
 
@@ -66,29 +63,25 @@ Constatou-se que ao clicar em Meus Pets, o usuário é redirecionado para a tela
 Aqui, é possível inserir o **nome, espécie, raça e data de nascimento**.
 O sistema também deverá possibilitar o upload da foto ou imagem do animal.
 
-![image](https://user-images.githubusercontent.com/78277341/168467201-bbd63e4d-a5fe-4e76-817a-29fbdaefff8e.png)
+![image](https://user-images.githubusercontent.com/78277341/174908072-0185c941-2fdb-4f77-a491-53edf8d630c4.png)
 
 ### :point_right: Observações importantes:
-Neste ponto, a equipe verificou que algumas melhorias devem ser aplicadas:
-- Ainda não é possível guardar as imagens ou fotos inseridas pelo usuário.
+:point_right: É possível guardar as imagens ou fotos inseridas pelo usuário no campo do Pet.
 
 Inserido os dados do Pet, a tela principal passará a mostrar a imagem, nome e raça do animal.
+
 Agora, dois botões passam a serem exibidos na tela principal: **Cuidar** e **Editar**. Vejamos:
 
-![image](https://user-images.githubusercontent.com/78277341/168467226-7169c963-2dd0-4c44-b0ed-2ef3950c070d.png)
+![image](https://user-images.githubusercontent.com/78277341/174910338-a5802343-e0b8-4306-822e-4fa764188558.png)
 
 ## 6. Testando a tela de *editar os dados do Pet*:
 
 Nesta tela, é possível alterar os dados do Pet ou excluir o registro.
 Verificamos que, ao alterar o registro, o sistema altera as informações no banco de dados com sucesso.
 
-![image](https://user-images.githubusercontent.com/78277341/168467287-80f772f9-1d81-4c5b-9e32-2dcb37b7fd63.png)
-
-
-
 Verificou-se também que, caso o usuário clic em "excluir", todos os dados do animal são devidamente excluídos do sistema e a tela principal volta a ser exibida com a ferramenta de adicionar novo cadastro.
 
-![image](https://user-images.githubusercontent.com/78277341/168467352-70eccf75-28d6-4f9b-aecc-9213eaf6ff0c.png)
+![image](https://user-images.githubusercontent.com/78277341/174910544-9ae6f687-93c8-4cac-8339-6637c7127bb8.png)
 
 ## 7. Testando ferramenta *Cuidar*:
 
@@ -98,22 +91,17 @@ Esta tela apresenta 3 opções de registro;
 - Gráficos de Peso e
 - Incluir Vacina/medicamento.
 
-
-![image](https://user-images.githubusercontent.com/78277341/168467377-009081e0-6e12-421d-888d-7eeecf09273c.png)
-
-
-
 ## 8. Testando ferramenta *Calendário de Vacinas*:
 
 Esta aba, apresentará um calendário que mostrará as datas de vacinas com vencimento próximo.
 
-![image](https://user-images.githubusercontent.com/78277341/143724524-c2d09ec2-7836-4e2b-a218-849187d7dea4.png)
+![image](https://user-images.githubusercontent.com/78277341/174911217-47781712-0bf0-44db-ba8c-e3f8b13cea3c.png)
 
 ### :point_right: Observações importantes sobre o calendário:
 Neste ponto, a equipe verificou que algumas melhorias deverão ser aplicadas:
-- Ainda não é possível guardar as informações inseridas na agenda.
-- O calendário ainda não está implementado e funcional.
-- ainda não é possível relizar notificação sobre datas ao usuário.
+- É possível guardar as informações inseridas na agenda.
+- O calendário ainda está implementado e funcional.
+- É possível relizar notificação sobre datas ao usuário.
 
 
 ## 9. Testando *Gráfico de pesos*:
@@ -124,13 +112,7 @@ A tela mostra um campo para que seja registrado o tipo de pesagem, informações
 Ao clicarmos em Adicionar, o sistema registra os dados e mostra uma tabela com as informações inseridas.
 Também é exibido as ferramentas de edição e exclusão desse cadastro.
 
-![image](https://user-images.githubusercontent.com/78277341/168467428-614e4894-97ef-45ca-bc19-cdcec9736ea7.png)
-
-### :point_right: Observações importantes em Gráfico de Pesos:
-Neste ponto, a equipe verificou que algumas melhorias deverão ser aplicadas:
-- Devemos implementar a imagem do gráfico, representando o desenvolvimento do peso do pet, conforme o seguinte esboço:
-
-![image](https://user-images.githubusercontent.com/78277341/143724710-5fd5677b-bb4b-45bb-9e0e-9ed63375dbc3.png)
+![image](https://user-images.githubusercontent.com/78277341/174910843-97ca77d7-ae03-41c3-b8b1-130cc2742891.png)
 
 ## 10. Testando *Incluir Vacinas*:
 
@@ -138,7 +120,7 @@ Na aba incluir vacinas, é possível ***cadastrar o medicamento***, informando s
 
 Também foi verificado que o sistema realiza a ***busca por nome de medicamento*** e também exibe uma tabela com os dados registrados. Vejamos:
 
-![image](https://user-images.githubusercontent.com/78277341/168467457-c72b1c30-2410-44ab-a096-eca5d71445af.png)
+![image](https://user-images.githubusercontent.com/78277341/174910932-c5336942-3b8b-4326-813a-62767cfd7635.png)
 
 
 ## 11. Vídeo de demonstração🍿:
