@@ -74,7 +74,7 @@ Para esta etapa do projeto, os testes serão realizados nas principais funcional
 **📌Observou-se que os usuários**:
 
 - Permaneceram com resposta emocional "confiante" durante o uso do sistema, recuperando-se rapidamente de eventuais erros.
-- Não sairam do fluxo cognitivo pré estabelecido pelo sistema.
+- Não saíram do fluxo cognitivo pré estabelecido pelo sistema.
 - Ainda é necessário estabelecer um critério de datas de nascimento, uma vez que o usuário poderá inserir qualquer numeração.
 #
 ## Ferramentas de Testes
