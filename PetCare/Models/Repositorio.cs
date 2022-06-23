@@ -266,9 +266,10 @@ namespace PetCare.Models
         {
             MySqlConnection conexao = new MySqlConnection(enderecoConexao);
             conexao.Open();
-            string stringSql = "INSERT INTO heroku_cd40deb8c8e7a90.registros(idpet, tiporegistro, descricao) values(@idpet, @tiporegistro, @descricao)";
+            string stringSql = "INSERT INTO heroku_cd40deb8c8e7a90.registros(idpet, idDono, tiporegistro, descricao) values(@idpet, @idDono, @tiporegistro, @descricao)";
             MySqlCommand cmdInsert = new MySqlCommand(stringSql, conexao);
             cmdInsert.Parameters.AddWithValue("@idpet", modelo.idPet);
+            cmdInsert.Parameters.AddWithValue("@idDono", modelo.Registro.idDono);
             cmdInsert.Parameters.AddWithValue("@tiporegistro", tipo);
             cmdInsert.Parameters.AddWithValue("@descricao", modelo.Registro.descricao);
             cmdInsert.ExecuteNonQuery();
@@ -431,14 +432,15 @@ namespace PetCare.Models
             return lista;
         }
 
-        public List<IndexModelView> listarRegistrosTodosMedicamentos()
+        public List<IndexModelView> listarRegistrosTodosMedicamentos(int idDono)
         {
             MySqlConnection conexao = new MySqlConnection(enderecoConexao);
             conexao.Open();
 
-            string stringSqlMed = "SELECT r.id, r.idpet, r.tiporegistro, r.descricao, m.nome, m.aplicacao, m.reaplicacao, m.dosagem FROM heroku_cd40deb8c8e7a90.registros AS r INNER JOIN heroku_cd40deb8c8e7a90.medicamentos AS m ON m.idregistro = r.id ORDER BY r.id ASC";
+            string stringSqlMed = "SELECT r.id, r.idpet, r.tiporegistro, r.descricao, m.nome, m.aplicacao, m.reaplicacao, m.dosagem FROM heroku_cd40deb8c8e7a90.registros AS r INNER JOIN heroku_cd40deb8c8e7a90.medicamentos AS m ON m.idregistro = r.id AND r.idDono = @idDono ORDER BY r.id ASC";
+            
             MySqlCommand cmdMed = new MySqlCommand(stringSqlMed, conexao);
-        
+            cmdMed.Parameters.AddWithValue("@idDono", idDono);
             MySqlDataReader dadosMed = cmdMed.ExecuteReader();
 
             List<IndexModelView> lista = new List<IndexModelView>();
@@ -485,7 +487,7 @@ namespace PetCare.Models
             return lista;
         }
 
-        public List<IndexModelView> listarRegistrosTodasVacinas()
+        public List<IndexModelView> listarRegistrosTodasVacinas(int idDono)
         {
             MySqlConnection conexao = new MySqlConnection(enderecoConexao);
             conexao.Open();
@@ -643,10 +645,10 @@ namespace PetCare.Models
             listaFinal.AddRange(listaVacinas);
             return listaFinal;
         }
-        public List<IndexModelView> retornaCalendarioGeral()
+        public List<IndexModelView> retornaCalendarioGeral(int idDono)
         {
-            List<IndexModelView> listaFinal = listarRegistrosTodosMedicamentos();
-            List<IndexModelView> listaVacinas = listarRegistrosTodasVacinas();
+            List<IndexModelView> listaFinal = listarRegistrosTodosMedicamentos(idDono);
+            List<IndexModelView> listaVacinas = listarRegistrosTodasVacinas(idDono);
             listaFinal.AddRange(listaVacinas);
             return listaFinal;
         }

@@ -506,12 +506,12 @@ namespace PetCare.Controllers
             }
         }
 
-        public IActionResult GetJsonCalendarioGeral(int idUsuario)
+        public IActionResult GetJsonCalendarioGeral(int idDono)
         {
             if (HttpContext.Session.GetInt32("id") != null)
             {
                 Repositorio repo = new Repositorio();
-                return Json(repo.retornaCalendarioGeral());
+                return Json(repo.retornaCalendarioGeral(idDono));
             }
             else
             {

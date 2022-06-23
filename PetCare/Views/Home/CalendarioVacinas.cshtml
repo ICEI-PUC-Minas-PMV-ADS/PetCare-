@@ -19,7 +19,7 @@
                     <article class="calendario">
                         <div id='calendar-geral'></div>
                     </article>
-                    <div class="card border-light mb-3"  style="max-width: 18rem;">
+                    <div class="popupInfo card border-light mb-3 invisivel" id="popupInfo" style="max-width: 18rem;">
                         <div class="card-header"><i class="fas fa-times invisivel" id="fechar-card"></i></div>
                         <div class="card-body text-dark" id="card-info">
                             
@@ -40,10 +40,12 @@
      //implementação do calendário geral do usuario
 
      var url = "@Url.Action("GetJsonCalendarioGeral", "Home")";
-
+     var parametros = {
+         'idDono': @Context.Session.GetInt32("id")
+     };
      async function getDadosCalendario(){
          var dados=[];
-         await $.get(url , function(response){
+         await $.get(url, parametros , function(response){
 
              var arrayEventos = Array.from(response);
              arrayEventos.forEach((elemento)=>{
@@ -87,7 +89,7 @@
                          color: 'red'
                         };
                      }
-                 }
+                 
                  }
 
                  dados.push(obj1);
@@ -108,6 +110,8 @@
     document.addEventListener('DOMContentLoaded', async function () {
         var cardInfo = document.getElementById('card-info');
             var fecharCard = document.getElementById('fechar-card');
+            var popupInfo = document.getElementById('popupInfo');
+
              var calendarEl = document.getElementById('calendar-geral');
              var eventos=[];
              await getDadosCalendario().then(res=>{
@@ -116,23 +120,18 @@
              fecharCard.addEventListener('click', ()=>{
                  cardInfo.classList.add('invisivel');
                     fecharCard.classList.add('invisivel');
+                    popupInfo.classList.add('invisivel');
              });
              var calendar = new FullCalendar.Calendar(calendarEl, {
                  initialView: 'dayGridMonth',
                  eventClick: function(info) {
                      cardInfo.classList.remove('invisivel');
                       fecharCard.classList.remove('invisivel');
-
+                      popupInfo.classList.remove('invisivel');
                          cardInfo.innerHTML = `
-
-
-
-                        
                             <h5 class="card-title">${info.event.title}</h5>
                             <p class="card-text">*${info.event.extendedProps.description}</p>
-                            <p class="card-text">*${info.event.extendedProps.data}</p>
-                       
-                     `;
+                            <p class="card-text">*${info.event.extendedProps.data}</p>       `;
                      info.el.style.borderColor = 'red';
                    },
                    eventMouseEnter: function(info) {
