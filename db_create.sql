@@ -22,14 +22,15 @@ CREATE TABLE `pets` (
   CONSTRAINT `idDono` FOREIGN KEY (`idDono`) REFERENCES `usuarios` (`id`) ON DELETE CASCADE ON UPDATE RESTRICT
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb3;
 CREATE TABLE `registros` (
-  `id` int unsigned NOT NULL AUTO_INCREMENT,
-  `idPet` int unsigned NOT NULL,
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `idPet` int(10) unsigned NOT NULL,
+  `idDono` int(10) unsigned NOT NULL,
   `descricao` varchar(450) NOT NULL,
   `tipoRegistro` varchar(45) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `idPet_idx` (`idPet`),
   CONSTRAINT `idPet` FOREIGN KEY (`idPet`) REFERENCES `pets` (`id`) ON DELETE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
 CREATE TABLE `pesos` (
   `id` int unsigned NOT NULL AUTO_INCREMENT,
   `idRegistro` int unsigned NOT NULL,

@@ -25,6 +25,12 @@ html {
 .invisivel {
     display: none!important;
 }
+.popupInfo {
+    position: absolute;
+    z-index: 99;
+    width: 18rem;
+    box-shadow: -5px 5px 5px rgb(0 0 0 / 30%);
+}
 
 .navbar {
     background-color: var(--cor-primaria);

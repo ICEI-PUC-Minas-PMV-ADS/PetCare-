@@ -8,7 +8,7 @@
     ViewData["urlForm"] = "";
     ViewData["listaBuscada"] = "";
     ViewData["listaPesos"] = @Model.ListaRegistrosPesos;
-
+    ViewData["idDono"] = @Context.Session.GetInt32("id");
 }
 
 
@@ -23,7 +23,7 @@
                         <div id='calendar-individual'></div>
                     </article>
                     
-                    <div class="card border-light mb-3"  style="max-width: 18rem;">
+                    <div class="popupInfo card border-light mb-3 invisivel"  id="popupInfo" style="max-width: 18rem;">
                         <div class="card-header"><i class="fas fa-times invisivel" id="fechar-card"></i></div>
                         <div class="card-body text-dark" id="card-info">
                             
@@ -66,6 +66,7 @@
                                             </div>
                                             <input id="field-idPet" type="hidden" asp-for="@Model.idPet" class="form-control" value="@Model.idPet" required>
                                             <input id="field-idRegistro" type="hidden" asp-for="Registro.id" class="form-control">
+                                            <input id="field-idRegistro" type="hidden" asp-for="@Model.Registro.idDono" class="form-control" value="@ViewData["idDono"]">
 
                                         </div>
 
@@ -174,6 +175,7 @@
                                         </div>
                                         <input id="field-idPet-med" type="hidden" asp-for="@Model.idPet" class="form-control" value="@Model.idPet" required>
                                         <input id="field-idRegistro-med" type="hidden" asp-for="Registro.id" class="form-control">
+                                            <input id="field-idRegistro" type="hidden" asp-for="@Model.Registro.idDono" class="form-control" value="@ViewData["idDono"]">
 
                                     </div>
 
@@ -543,6 +545,8 @@
 
             var cardInfo = document.getElementById('card-info');
             var fecharCard = document.getElementById('fechar-card');
+            var popupInfo = document.getElementById('popupInfo');
+
              var calendarEl = document.getElementById('calendar-individual');
              var eventos=[];
              await getDadosCalendario().then(res=>{
@@ -551,12 +555,15 @@
              fecharCard.addEventListener('click', ()=>{
                  cardInfo.classList.add('invisivel');
                     fecharCard.classList.add('invisivel');
+                    popupInfo.classList.add('invisivel');
+
              });
              var calendar = new FullCalendar.Calendar(calendarEl, {
                  initialView: 'dayGridMonth',
                  eventClick: function(info) {
                       cardInfo.classList.remove('invisivel');
                       fecharCard.classList.remove('invisivel');
+                      popupInfo.classList.remove('invisivel');
 
                          cardInfo.innerHTML = `
 
