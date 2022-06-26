@@ -1,4 +1,4 @@
-<a href="[https://icei-puc-minas-pmv-ads.github.io/PetCare/](https://petcare-deploy.herokuapp.com/)"><img src="https://s1.1zoom.me/big0/885/Dogs_Cats_Guinea_pigs_White_background_Three_3_564019_1280x779.jpg" width="750px">
+<a href="https://icei-puc-minas-pmv-ads.github.io/PetCare/"><img src="https://s1.1zoom.me/big0/885/Dogs_Cats_Guinea_pigs_White_background_Three_3_564019_1280x779.jpg" width="750px">
 # <a href="https://icei-puc-minas-pmv-ads.github.io/PetCare/"><img src="https://user-images.githubusercontent.com/77770841/134394324-8b1c1cc0-9610-4b66-bb25-e3e67839b3aa.gif" width="300px"></a>
 `ANÁLISE E DESENVOLVIMENTO DE SISTEMAS`
 
@@ -6,16 +6,16 @@
 `Projeto: Desenvolvimento de Aplicação Web Front-End - Turma 2 -`
 
 `2º semestre`
- #
-🐶[PetCare](https://icei-puc-minas-pmv-ads.github.io/PetCare/)
+#
+🐶[PetCare](https://petcare-deploy.herokuapp.com/)
 
-Esse projeto tem como objetivo criar uma plataforma que possibilitará registro de vacinação de animais de estimação pelos seus respectivos proprietários, formando assim uma cartela digital com histórico de vacinação do pet desde seu nascimento ou aquisição. 
+Esse projeto tem como objetivo criar uma plataforma que possibilitará registro de vacinação de animais de estimação pelos seus respectivos proprietários, formando assim uma cartela digital com histórico de vacinação do pet desde seu nascimento ou aquisição.
 ## Integrantes
 
 🐾 *Bruno Benetolo*
 
 🐾 *Hugo Vinicius Damasceno Pinto*
- 
+
 🐾 *Matheus Amorim*
 
 🐾 *Mariana Pimentel*
@@ -32,10 +32,8 @@ Esse projeto tem como objetivo criar uma plataforma que possibilitará registro 
 ## Instruções de utilização
 
 - Acesse o projeto pelo computador ou celular:   
-🐕[PetCare](https://icei-puc-minas-pmv-ads.github.io/PetCare/)
- 
-         - E-mail: brunobenetolo@hotmail.com  
-         - Senha:  123456
+  🐕[PetCare](https://petcare-deploy.herokuapp.com/)
+
 
 - Site publicado na Internet
 - Navegador da Internet - Chrome, Firefox ou Edge
@@ -64,6 +62,8 @@ Esse projeto tem como objetivo criar uma plataforma que possibilitará registro 
 <li><a href="src/README.md"> Código Fonte</a></li>
 
 # Apresentação
-PatCare é uma cartela digital de vacinação. Neste vídeo, apresentamos o objetivo do nosso projeto que é voltado para proprietários de pequenos animais domésticos, que através desta plataforma, poderão registrar as vacinas, as medicações e consultas veterinárias, acompanhando e criando um histórico de desenvolvimento do animalzinho com mais conforto e segurança. 
+PatCare é uma cartela digital de vacinação. Neste vídeo, apresentamos o objetivo do nosso projeto que é voltado para proprietários de pequenos animais domésticos, que através desta plataforma, poderão registrar as vacinas, as medicações e consultas veterinárias, acompanhando e criando um histórico de desenvolvimento do animalzinho com mais conforto e segurança.
+
+[![Watch the video](https://user-images.githubusercontent.com/78277341/175836726-045c6cbd-f203-44d1-b005-c388a717c3d4.png)](https://youtu.be/IxhJQbVDUA4)
 
 [![Watch the video](https://user-images.githubusercontent.com/78277341/144880982-308d72df-079e-4f8e-a8e6-1bfbeda473de.png)](https://youtu.be/oS4SosY4xmY)
